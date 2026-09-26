@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <main>
       {/* ===== Hero Section ===== */}
-      <section className="pt-24 pb-16 md:pt-28 md:pb-20">
-        <div className="wrap">
+      <section className="pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+        <div className="wrap w-full max-w-full">
           <h1 className="text-[clamp(2.6rem,6vw,4.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.28] tracking-[-0.015em] font-semibold">
             Focus on your core.
             <br />
@@ -79,67 +79,67 @@ export default function Home() {
           </div>
 
           {/* 3x3 Grid of Tiles */}
-          <div className="grid grid-cols-3 gap-[10px]">
-            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] text-[var(--grey-text)]">
+          <div className="grid w-full max-w-full grid-cols-3 gap-[10px] overflow-hidden">
+            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)]">
               Leadership
             </div>
             <Link
               href="/solutions/strategy-research"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] hover:bg-[#022B2A] transition-colors no-underline group"
+              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
-              <span className="flex items-end gap-1.5">
+              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
                 Strategy and research
-                <svg className="w-3.5 h-3.5 mb-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
-            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] text-[var(--grey-text)]">
+            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)]">
               Sales
             </div>
             <Link
               href="/solutions/financial-modelling-planning"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] hover:bg-[#022B2A] transition-colors no-underline group"
+              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
-              <span className="flex items-end gap-1.5">
+              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
                 Financial modelling
-                <svg className="w-3.5 h-3.5 mb-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
-            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] text-[var(--grey-text)]">
+            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)]">
               Product
             </div>
             <Link
               href="/solutions/data-driven-insights"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] hover:bg-[#022B2A] transition-colors no-underline group"
+              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
-              <span className="flex items-end gap-1.5">
+              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
                 Data driven insights
-                <svg className="w-3.5 h-3.5 mb-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
             <Link
               href="/solutions/marketing"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] hover:bg-[#022B2A] transition-colors no-underline group"
+              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
-              <span className="flex items-end gap-1.5">
+              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
                 Marketing
-                <svg className="w-3.5 h-3.5 mb-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
             <Link
               href="/solutions/retail-operations"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] hover:bg-[#022B2A] transition-colors no-underline group"
+              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
-              <span className="flex items-end gap-1.5">
+              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
                 Retail operations
-                <svg className="w-3.5 h-3.5 mb-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
@@ -161,7 +161,7 @@ export default function Home() {
 
       {/* ===== Testimonials (Native Scroll-Snap) ===== */}
       <section className="py-24 bg-white overflow-hidden">
-        <div className="wrap">
+        <div className="wrap w-full max-w-full overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-end mb-14">
             <div>
               <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] max-w-[20ch] leading-[1.3] tracking-[-0.015em] font-semibold">
