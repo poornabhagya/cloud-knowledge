@@ -60,11 +60,11 @@ const solutionsList = [
       </svg>
     ),
   },
-  {
-    title: "Retail operations",
+{
+    title: "Operations & performance",
     href: "/solutions/retail-operations",
-    lead: "Enhance inventory turnover, customer analytics, and store performance frameworks.",
-    inc: "Stock Planning Systems, Retail KPI Dashboards, Discount Analysis, Efficiency Audits",
+    lead: "Enhance retail and business operations through inventory optimisation, customer analytics, and data-driven management.",
+    inc: "Inventory Systems, KPI Dashboards, Customer Analytics, Discount Effectiveness, Process Audits",
     icon: (
       <svg viewBox="0 0 24 24">
         <path d="M3 9l1.5-4h15L21 9" />
@@ -73,16 +73,14 @@ const solutionsList = [
       </svg>
     ),
   },
-  {
+{
     title: "Cybersecurity",
     href: "/solutions/cybersecurity",
-    lead: "Uncover vulnerabilities, enforce compliance, and protect assets before an attack occurs.",
-    inc: "Penetration Testing, Vendor Audits, Security Blueprints, Managed SOC, Red Teaming",
+    lead: "Risk assessments, controls, policies, penetration testing, and incident preparedness, delivered by senior cybersecurity specialists.",
+    inc: "Penetration Testing, AI Security, Blueprint, Vendor Audits, SOC, Red Team",
     icon: (
-      <svg viewBox="0 0 24 24">
-        <path d="M12 3l8 3v6c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V6l8-3z" />
-        <rect x="9" y="11" width="6" height="5" rx="1" />
-        <path d="M10 11V9.5a2 2 0 0 1 4 0V11" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
   },

@@ -43,16 +43,22 @@ export default function EngagementPage() {
       {/* Page Hero */}
       <section className="py-16 md:py-20">
         <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
-          <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2]">
-            How you can work with us
-          </h1>
-          <p className="text-[1.2rem] leading-[1.65] max-w-[32rem] text-[var(--ink)]">
-            Every organisation operates differently. Choose between a focused standalone project, flexible recurring retainer capacity, or an embedded dedicated team.
+          <div>
+            <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2]">
+              How to partner with us
+            </h1>
+            <br />
+            <h2 className="text-[1.5rem] text-[var(--ink)] font-medium mt-2">
+              Three Ways to Work With CKS
+            </h2>
+          </div>
+          <p className="text-[1.15rem] leading-[1.65] max-w-[32rem] text-[var(--ink)]">
+            Every organisation needs something different; it can be a single sharp answer, ongoing support, or a team that's simply part of yours. Whether you need a focused project, continuous support, or an embedded team, we structure the engagement around how you actually need to work, not a one-size-fits-all contract.
           </p>
         </div>
       </section>
 
-      {/* Model 01: Projects */}
+      {/* Model 01: Project-Based */}
       <section className="py-24 border-t border-[rgba(45,45,39,0.08)] scroll-mt-4" id="projects">
         <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div>
@@ -60,74 +66,55 @@ export default function EngagementPage() {
               Model 01
             </span>
             <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] max-w-[14ch] mt-2 leading-[1.22]">
-              Projects
+              Project-Based
             </h2>
             <br/>
             <p className="mt-4 text-[1.15rem] leading-[1.65] max-w-[26rem] text-[var(--ink)]">
-              A single, focused engagement built around one specific challenge or deliverable. Defined scope, clear timeline, and clean handoff.
+              A single, focused engagement built around one specific challenge or deliverable. Defined scope, clear timeline, clean handoff.
             </p>
-            <div className="mt-8 p-5 border-l-[3px] border-[var(--teal)] bg-[rgba(4,61,59,0.06)] rounded-r-lg text-[0.95rem] text-[var(--ink)]">
-              <b className="block font-[family-name:var(--head)] font-medium text-[var(--teal)] mb-1">
-                Best for
+            <div className="mt-8 p-6 border-l-[3px] border-[var(--teal)] bg-[rgba(4,61,59,0.06)] rounded-r-lg text-[1rem] text-[var(--ink)] leading-relaxed">
+              <b className="block font-[family-name:var(--head)] font-semibold text-[var(--teal)] mb-2 text-[1.1rem]">
+                Best for:
               </b>
               Organisations with a specific question to answer or decision to support, without an ongoing need for research or analytics capacity.
             </div>
           </div>
 
-          <div>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 list-none p-0 m-0">
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">How it starts</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  We scope the commercial challenge together, establish inputs and constraints, and agree upfront on deliverable formats and milestones.
-                </p>
+          <div className="bg-white p-8 md:p-10 border border-[rgba(45,45,39,0.1)] rounded-[16px]">
+            <h3 className="text-[1.3rem] font-medium text-[var(--teal)] mb-5">What's included:</h3>
+            <br/>
+            <ul className="list-none p-0 m-0 space-y-4 text-[1.05rem] text-[var(--ink)] leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                A defined scope and timeline agreed upfront, so there's no ambiguity about what's delivered and when
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">How it runs</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  A single point of contact manages the delivery team from kickoff to completion, running structured weekly status touchpoints.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                A single point of contact managing the engagement from kickoff to delivery
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">What you get</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Clean, audit-ready deliverables (models, reports, dashboards) packaged for executive presentation and independent long-term use.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Clean, structured deliverables built to be used and presented, not just handed over
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">Commercials</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Fixed project fee tied strictly to the agreed deliverables and timeline, with no unexpected hourly overages.
-                </p>
-              </li>
-              <li className="sm:col-span-2 border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">Typical engagements</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Fundraising financial models, market entry regulatory mapping, M&A diligence support, total addressable market analysis, and web penetration testing.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                A fixed cost tied to the defined scope, agreed before work begins
               </li>
             </ul>
+            <br/>
+            <br/>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 mt-10 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
-            >
-              Discuss a projects engagement
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M4 12 12 4M6 4h6v6" />
-              </svg>
-            </Link>
+            <h3 className="text-[1.3rem] font-medium text-[var(--teal)] mt-10 mb-4">How it works:</h3>
+            <br/>
+            <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
+              We scope the challenge together, agree on deliverables and timeline, then execute against that plan with regular check-ins until delivery.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Model 02: Retainer */}
-      <section className="py-24 bg-white scroll-mt-4" id="retainer">
+      <section className="py-24 bg-[rgba(4,61,59,0.02)] border-t border-[rgba(45,45,39,0.08)] scroll-mt-4" id="retainer">
         <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div>
             <span className="font-[family-name:var(--head)] font-medium text-[0.9rem] text-[var(--teal-muted)]">
@@ -138,70 +125,51 @@ export default function EngagementPage() {
             </h2>
             <br/>
             <p className="mt-4 text-[1.15rem] leading-[1.65] max-w-[26rem] text-[var(--ink)]">
-              Ongoing research, finance, and operations support on a recurring basis with regular deliverables and capacity that adapts as priorities shift.
+              Ongoing research and operations support on a recurring basis with regular deliverables, a flexible scope that can shift as your priorities do, and a partnership that deepens over time rather than resetting with every new project.
             </p>
-            <div className="mt-8 p-5 border-l-[3px] border-[var(--teal)] bg-[rgba(4,61,59,0.06)] rounded-r-lg text-[0.95rem] text-[var(--ink)]">
-              <b className="block font-[family-name:var(--head)] font-medium text-[var(--teal)] mb-1">
-                Best for
+            <div className="mt-8 p-6 border-l-[3px] border-[var(--teal)] bg-white shadow-sm rounded-r-lg text-[1rem] text-[var(--ink)] leading-relaxed">
+              <b className="block font-[family-name:var(--head)] font-semibold text-[var(--teal)] mb-2 text-[1.1rem]">
+                Best for:
               </b>
-              Companies with steady analytical and operational needs where priorities change month to month and standalone scoping overhead slows execution down.
+              Organisations with a continuous need for research, analysis, or reporting where priorities shift month to month and a single fixed-scope project doesn't fit.
             </div>
           </div>
 
-          <div>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 list-none p-0 m-0">
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">How it starts</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  We baseline your recurring monthly needs, allocate dedicated analyst hours, and establish a rolling backlog of high-impact tasks.
-                </p>
+          <div className="bg-white p-8 md:p-10 border border-[rgba(45,45,39,0.1)] rounded-[16px]">
+            <h3 className="text-[1.3rem] font-medium text-[var(--teal)] mb-5">What's included:</h3>
+            <br/>
+            <ul className="list-none p-0 m-0 space-y-4 text-[1.05rem] text-[var(--ink)] leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                A recurring block of capacity you can direct across evolving priorities
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">How it runs</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  A dedicated engagement lead coordinates workflow priorities on a weekly or bi-weekly sync, ensuring capacity is directed where it matters most.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Regular deliverables on a cadence that fits how your business operates
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">What you get</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Consistent delivery cadences (e.g., monthly budget variance updates, weekly KPI refreshes, competitor tracking briefs).
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Flexible scope that can shift between projects as needs change, without renegotiating a new contract each time
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">Commercials</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Predictable monthly retainer fee corresponding to an agreed capacity tier, with flexible rollover options across project types.
-                </p>
-              </li>
-              <li className="sm:col-span-2 border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">Typical engagements</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Ongoing FP&A variance tracking, monthly executive dashboards, recurring sector market outlooks, continuous vendor risk monitoring, and marketing execution.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                A dedicated point of contact who builds context on your business over time
               </li>
             </ul>
+            <br/>
+            <br/>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 mt-10 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
-            >
-              Discuss a retainer engagement
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M4 12 12 4M6 4h6v6" />
-              </svg>
-            </Link>
+            <h3 className="text-[1.3rem] font-medium text-[var(--teal)] mt-10 mb-4">How it works:</h3>
+            <br/>
+            <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
+              We agree on a recurring capacity and cadence, then work through a prioritized queue of deliverables each period, adjusting scope as your priorities evolve.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Model 03: Dedicated Team */}
-      <section className="py-24 scroll-mt-4" id="dedicated-team">
+      <section className="py-24 border-t border-[rgba(45,45,39,0.08)] scroll-mt-4" id="dedicated-team">
         <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div>
             <span className="font-[family-name:var(--head)] font-medium text-[0.9rem] text-[var(--teal-muted)]">
@@ -212,64 +180,91 @@ export default function EngagementPage() {
             </h2>
             <br/>
             <p className="mt-4 text-[1.15rem] leading-[1.65] max-w-[26rem] text-[var(--ink)]">
-              An extended team model. Our specialists embed directly into your internal organization, joining your meetings, tools, and daily workflows.
+              An extended team model. Our analysts work as part of your organisation, embedded in your workflows and priorities, with the deep continuity that comes from working alongside your team over time rather than in and out on separate projects.
             </p>
-            <div className="mt-8 p-5 border-l-[3px] border-[var(--teal)] bg-[rgba(4,61,59,0.06)] rounded-r-lg text-[0.95rem] text-[var(--ink)]">
-              <b className="block font-[family-name:var(--head)] font-medium text-[var(--teal)] mb-1">
-                Best for
+            <div className="mt-8 p-6 border-l-[3px] border-[var(--teal)] bg-[rgba(4,61,59,0.06)] rounded-r-lg text-[1rem] text-[var(--ink)] leading-relaxed">
+              <b className="block font-[family-name:var(--head)] font-semibold text-[var(--teal)] mb-2 text-[1.1rem]">
+                Best for:
               </b>
-              Companies requiring sustained, integrated analytical horsepower that functions like an in-house department without hiring or infrastructure overhead.
+              Organisations that need sustained analytical or research capacity functioning like an internal team, without the overhead of hiring and building that capability from scratch.
             </div>
           </div>
 
-          <div>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 list-none p-0 m-0">
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">How it starts</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  We match full-time professionals specifically vetted for your tech stack, domain, and time zone requirements, followed by an onboarding sprint.
-                </p>
+          <div className="bg-white p-8 md:p-10 border border-[rgba(45,45,39,0.1)] rounded-[16px]">
+            <h3 className="text-[1.3rem] font-medium text-[var(--teal)] mb-5">What's included:</h3>
+            <br/>
+            <ul className="list-none p-0 m-0 space-y-4 text-[1.05rem] text-[var(--ink)] leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Dedicated analysts working consistently with your team, not rotating between unrelated projects
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">How it runs</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Analysts work exclusively on your accounts, joining your Slack/Teams channels, Jira/Asana boards, and standup meetings directly.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Deep familiarity with your business, data, and priorities that builds over time
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">What you get</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Deep contextual knowledge, institutional memory, and continuous real-time execution across all operational and strategic workstreams.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Direct integration into your existing workflows, tools, and meeting cadence
               </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">Commercials</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Straightforward FTE monthly pricing tier per specialist, saving up to 60% compared to local Western or Gulf in-house hires.
-                </p>
-              </li>
-              <li className="sm:col-span-2 border-t border-[rgba(45,45,39,0.14)] pt-4">
-                <h3 className="text-[1.05rem] font-medium text-[var(--teal)]">Typical engagements</h3>
-                <br/>
-                <p className="mt-1.5 text-[1rem] text-[var(--grey-text)] leading-relaxed">
-                  Full embedded FP&A support teams, dedicated business intelligence units, continuous 24/7 SOC monitoring rotations, and white-label consulting delivery pods.
-                </p>
+              <li className="flex items-start gap-3">
+                <span className="text-[var(--teal)] mt-1">•</span>
+                Flexible capacity that can scale up or down as your needs change
               </li>
             </ul>
+            <br/>
+            <br/>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 mt-10 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
-            >
-              Discuss a dedicated team engagement
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M4 12 12 4M6 4h6v6" />
-              </svg>
-            </Link>
+            <h3 className="text-[1.3rem] font-medium text-[var(--teal)] mt-10 mb-4">How it works:</h3>
+            <br/>
+            <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
+              We embed dedicated analysts into your team's workflow, with regular integration into your meetings and priorities, functioning as an extension of your organisation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Choose Section */}
+      <section className="py-24 bg-white border-t border-[rgba(45,45,39,0.08)]">
+        <div className="wrap">
+          <div className="text-center max-w-[40rem] mx-auto mb-14">
+            <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] leading-[1.22]">
+              How to Choose
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Box 1 */}
+            <div className="bg-white border border-[rgba(45,45,39,0.14)] p-8 rounded-[16px] shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-[1.15rem] font-semibold text-[var(--teal)] mb-3 leading-[1.4]">
+                Have one specific question or deliverable?
+              </h3>
+              <br/>
+              <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
+                <span className="font-medium text-[var(--teal-muted)]">Project-Based</span> fits it has clean scope, clear timeline, defined cost.
+              </p>
+            </div>
+
+            {/* Box 2 */}
+            <div className="bg-white border border-[rgba(45,45,39,0.14)] p-8 rounded-[16px] shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-[1.15rem] font-semibold text-[var(--teal)] mb-3 leading-[1.4]">
+                Need ongoing support but priorities shift often?
+              </h3>
+              <br/>
+              <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
+                <span className="font-medium text-[var(--teal-muted)]">Retainer</span> gives you flexible, recurring capacity without a new contract each time.
+              </p>
+            </div>
+
+            {/* Box 3 */}
+            <div className="bg-white border border-[rgba(45,45,39,0.14)] p-8 rounded-[16px] shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-[1.15rem] font-semibold text-[var(--teal)] mb-3 leading-[1.4]">
+                Need sustained capacity that feels like part of your team?
+              </h3>
+              <br/>
+              <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
+  <span className="font-medium text-[var(--teal-muted)]">Project-Based</span> fits it has clean scope...
+</p>
+            </div>
           </div>
         </div>
       </section>

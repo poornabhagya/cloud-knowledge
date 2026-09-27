@@ -46,11 +46,14 @@ export default async function ServiceTemplatePage({
 
       {/* Page Hero */}
       <section className="pt-20 pb-22 border-b border-[rgba(45,45,39,0.14)] mb-18">
-        <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
-          <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.28] tracking-[-0.015em] font-semibold">
-            {service.title}
-          </h1>
-          <p className="text-[1.2rem] leading-[1.7] max-w-[32rem] text-[var(--ink)]">
+        {/* මෙතන items-end වෙනුවට items-start දාන්න 👇 */}
+        <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-start">
+          <div>
+            <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.28] tracking-[-0.015em] font-semibold">
+              {service.headline || service.title}
+            </h1>
+          </div>
+          <p className="text-[1.15rem] leading-[1.7] max-w-[34rem] text-[var(--ink)] whitespace-pre-wrap">
             {service.intro}
           </p>
         </div>
@@ -73,7 +76,7 @@ export default async function ServiceTemplatePage({
             {service.subProducts.map((prod) => (
               <li
                 key={prod.title}
-                className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 md:p-9 flex flex-col justify-start"
+                className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 md:p-9 flex flex-col justify-start transition-[border-color,transform] duration-150 hover:border-[var(--teal-muted)] hover:-translate-y-0.5"
               >
                 <span
                   className="w-11 h-11 rounded-[10px] bg-[rgba(4,61,59,0.08)] grid place-items-center"
@@ -88,78 +91,156 @@ export default async function ServiceTemplatePage({
                   </svg>
                 </span>
                 <br/>
-                {/* Heading ke neeche clean spacing */}
                 <h3 className="text-[1.22rem] font-medium mt-6 mb-3.5 text-[var(--ink)] leading-[1.35] tracking-[-0.01em]">
-                  {prod.title}
+                  <Link href={`/solutions/${service.slug}/${prod.slug || '#'}`} className="hover:text-[var(--teal)] no-underline text-inherit">
+                    {prod.title}
+                  </Link>
                 </h3>
                 <br/>
-                {/* Paragraph copy text line-height adjustment */}
                 <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
                   {prod.desc}
                 </p>
+                <Link
+                  href={`/solutions/${service.slug}/${prod.slug || '#'}`}
+                  className="mt-auto pt-8 inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[0.95rem] text-[var(--teal)] no-underline self-start hover:underline underline-offset-[5px] group"
+                >
+                  Learn more
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M4 12 12 4M6 4h6v6" />
+                  </svg>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      {/* Who We Work With */}
-      <section className="py-24 bg-white">
-        <div className="wrap">
-          <div className="mb-14">
-            <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] max-w-[20ch] leading-[1.3] tracking-[-0.015em] font-semibold">
-              How we fit into your team
-            </h2>
-            <br/>
-            <p className="mt-5 max-w-[34rem] text-[var(--ink)] text-[1.0625rem] leading-[1.65]">
-              We play one of three roles depending on the client. The service lines are the same; what changes is how we fit around your team.
-            </p>
+      {/* DYNAMIC: Why Choose CKS */}
+      {service.whyCks && (
+        <section className="py-24 bg-[rgba(4,61,59,0.03)] border-t border-[rgba(45,45,39,0.08)]">
+          <div className="wrap">
+            <div className="mb-14 text-center max-w-[40rem] mx-auto">
+              <h2 className="text-[clamp(2rem,3vw,2.6rem)] text-[var(--teal)] leading-[1.3] font-semibold">
+                Why Choose CKS
+              </h2>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
+              {service.whyCks.map((item: any, idx: number) => (
+                <li key={idx} className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 shadow-sm">
+                  <h3 className="text-[1.2rem] font-medium text-[var(--teal)] mb-3">{item.title}</h3>
+                  <br/>
+                  <p className="text-[1.05rem] text-[var(--ink)] leading-[1.65]">{item.desc}</p>
+                </li>
+              ))}
+            </ul>
           </div>
+        </section>
+      )}
 
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 list-none p-0 m-0">
-            <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
-              <h3 className="text-[1.3rem] font-medium text-[var(--teal)] leading-[1.3]">Delivery partner</h3>
-              <br/>
-              <p className="mt-4 text-[1.1rem] leading-[1.7] text-[var(--ink)]">
-                For professional services firms that need an adjacent capability inside their own deliverable. We work under your brand, to your standards and timelines, so you can take on the full scope without building the team for it.
+      {/* DYNAMIC: Why Sri Lanka */}
+      {service.whySriLanka && (
+        <section className="py-24 bg-white border-t border-[rgba(45,45,39,0.08)]">
+          <div className="wrap grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 items-start">
+            <div>
+              <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] leading-[1.22] font-semibold">
+                Why Choose Sri Lanka for your outsourcing?
+              </h2>
+            </div>
+            <div>
+              <p className="text-[1.15rem] leading-[1.7] text-[var(--ink)]">
+                {service.whySriLanka}
               </p>
-            </li>
-            <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
-              <h3 className="text-[1.3rem] font-medium text-[var(--teal)] leading-[1.3]">Outsourced partner</h3>
-              <br/>
-              <p className="mt-4 text-[1.1rem] leading-[1.7] text-[var(--ink)]">
-                For established companies that want ongoing back end support, from reporting and analysis to research and operations. We take the recurring work off your desk so your people can stay on product, sales and customer retention.
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* DYNAMIC: Built on Trust and Security */}
+      {service.trustSecurity && (
+        <section className="py-24 bg-[rgba(4,61,59,0.03)] border-t border-[rgba(45,45,39,0.08)]">
+          <div className="wrap">
+            <div className="mb-14 max-w-[48rem]">
+              <h2 className="text-[clamp(2rem,3vw,2.6rem)] text-[var(--teal)] leading-[1.3] font-semibold mb-6">
+                Built on Trust and Security
+              </h2>
+              <p className="text-[1.15rem] leading-[1.7] text-[var(--ink)]">
+                {service.trustIntro}
               </p>
-            </li>
-            <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
-              <h3 className="text-[1.3rem] font-medium text-[var(--teal)] leading-[1.3]">Strategic partner</h3>
+            </div>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
+              {service.trustSecurity.map((item: any, idx: number) => (
+                <li key={idx} className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 shadow-sm border-t-[3px] border-t-[var(--teal-muted)]">
+                  <h3 className="text-[1.15rem] font-medium text-[var(--teal)] mb-3">{item.title}</h3>
+                  <br/>
+                  <p className="text-[1rem] text-[var(--grey-text)] leading-[1.65]">{item.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* FALLBACK: How we fit into your team (Only show if new sections don't exist) */}
+      {!service.whyCks && (
+        <section className="py-24 bg-white border-t border-[rgba(45,45,39,0.08)]">
+          <div className="wrap">
+            <div className="mb-14">
+              <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] max-w-[20ch] leading-[1.3] tracking-[-0.015em] font-semibold">
+                How we fit into your team
+              </h2>
               <br/>
-              <p className="mt-4 text-[1.1rem] leading-[1.7] text-[var(--ink)]">
-                For start ups and growing companies that need capability they do not yet have. We build it with you, from financial models and market research to the proprietary data and tools your growth depends on, and hand it over as yours.
+              <p className="mt-5 max-w-[34rem] text-[var(--ink)] text-[1.0625rem] leading-[1.65]">
+                We play one of three roles depending on the client. The service lines are the same; what changes is how we fit around your team.
               </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+            </div>
+
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 list-none p-0 m-0">
+              <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
+                <h3 className="text-[1.3rem] font-medium text-[var(--teal)] leading-[1.3]">Delivery partner</h3>
+                <br/>
+                <p className="mt-4 text-[1.1rem] leading-[1.7] text-[var(--ink)]">
+                  For professional services firms that need an adjacent capability inside their own deliverable. We work under your brand, to your standards and timelines, so you can take on the full scope without building the team for it.
+                </p>
+              </li>
+              <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
+                <h3 className="text-[1.3rem] font-medium text-[var(--teal)] leading-[1.3]">Outsourced partner</h3>
+                <br/>
+                <p className="mt-4 text-[1.1rem] leading-[1.7] text-[var(--ink)]">
+                  For established companies that want ongoing back end support, from reporting and analysis to research and operations. We take the recurring work off your desk so your people can stay on product, sales and customer retention.
+                </p>
+              </li>
+              <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
+                <h3 className="text-[1.3rem] font-medium text-[var(--teal)] leading-[1.3]">Strategic partner</h3>
+                <br/>
+                <p className="mt-4 text-[1.1rem] leading-[1.7] text-[var(--ink)]">
+                  For start ups and growing companies that need capability they do not yet have. We build it with you, from financial models and market research to the proprietary data and tools your growth depends on, and hand it over as yours.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* CTA Band */}
       <section className="py-22 bg-[var(--teal)] text-[var(--cream)]">
         <div className="wrap grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-10 md:gap-16 items-center">
           <div>
-            <h2 className="text-[clamp(2rem,3.8vw,3rem)] text-[var(--cream)] max-w-[18ch] leading-[1.28] tracking-[-0.015em] font-semibold">
-              Ready to extend your team's execution capacity?
+            <h2 className="text-[clamp(2rem,3.8vw,3rem)] text-[var(--cream)] max-w-[22ch] leading-[1.28] tracking-[-0.015em] font-semibold">
+              CKS takes care of the operational work so growing companies can scale faster.
             </h2>
-            <br/>
-            <p className="mt-5 text-[var(--teal-quiet)] max-w-[30rem] text-[1.1rem] leading-[1.65]">
-              Talk with our specialists to scope the exact model and expertise your business needs today.
-            </p>
           </div>
           <div className="justify-self-start md:justify-self-end flex items-center gap-6 flex-wrap">
             <Link
               href="/contact"
-              className="bg-[var(--cream)] text-[var(--teal)] hover:bg-white text-[1rem] px-7 py-4 rounded-full font-[family-name:var(--head)] font-medium inline-flex items-center gap-2.5 transition-colors no-underline group"
+              className="bg-[var(--cream)] text-[var(--teal)] hover:bg-white text-[1.05rem] px-8 py-4 rounded-full font-[family-name:var(--head)] font-medium inline-flex items-center gap-2.5 transition-colors no-underline group"
             >
-              Partner with Us
+              Talk to an expert
               <svg
                 className="w-4 h-4 transition-transform group-hover:translate-x-1"
                 viewBox="0 0 24 24"
