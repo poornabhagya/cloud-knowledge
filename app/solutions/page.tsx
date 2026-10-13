@@ -109,10 +109,10 @@ export default function SolutionsPage() {
       <section className="py-16 md:py-20">
         <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
           <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.28] tracking-[-0.015em] font-semibold">
-            Specialist execution across six key disciplines
+            Rigorous strategy work, under your brand or ours
           </h1>
           <p className="text-[1.2rem] leading-[1.7] max-w-[32rem] text-[var(--ink)]">
-            Designed to fit around your in-house teams. We take on the specialist research, financial, analytics, and operational work so your core leadership stays focused.
+            Whether you are a professional services firm that needs extra delivery capacity, or an organisation weighing a major strategic move, CKS provides the market sizing, due diligence and competitive analysis that sound decisions are built on.
           </p>
         </div>
       </section>
