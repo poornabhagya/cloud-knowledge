@@ -95,7 +95,7 @@ export default function Home() {
               className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
               <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Strategy and research
+                Strategy
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
@@ -109,7 +109,7 @@ export default function Home() {
               className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
               <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Financial modelling
+                Finance
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
@@ -123,7 +123,7 @@ export default function Home() {
               className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
               <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Data driven insights
+                Data
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
@@ -145,7 +145,7 @@ export default function Home() {
               className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
             >
               <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Retail operations
+                Operations
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
@@ -238,91 +238,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== How You Can Work With Us (Centered Icons & Content) ===== */}
-      <section className="py-24 bg-[#053835] text-[var(--cream)]" id="engagement-models">
+      {/* ===== Engagement Models ===== */}
+      <section className="py-24" id="engagement-models">
         <div className="wrap">
-          <div className="mb-16 text-center">
-            <h2 className="text-[clamp(2.2rem,4vw,3.2rem)] font-bold tracking-tight text-white mb-4">
-              How You Can Work With Us
+          <div className="mb-14">
+            <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] max-w-[20ch] leading-[1.3] tracking-[-0.015em] font-semibold">
+              How you can work with us
             </h2>
+            <br />
+            <p className="mt-5 max-w-[34rem] text-[var(--ink)] text-[1.0625rem] leading-[1.65]">
+              Choose the delivery model that fits your operational rhythm and internal capacity.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Project Based */}
-            <div className="border border-[rgba(255,255,255,0.18)] bg-[#042C2A]/60 rounded-[18px] p-8 md:p-10 flex flex-col items-center text-center justify-between">
-              <div className="flex flex-col items-center w-full">
-                <div className="w-12 h-12 flex items-center justify-center mb-6 text-center">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl md:text-[1.35rem] font-bold text-white mb-4 text-center">
-                  Project Based
-                </h3>
-                <p className="text-[0.95rem] text-[#C0D4D2] leading-relaxed text-center">
-                  Single engagement for a specific challenge. Clean deliverables, defined timeline, focused scope.
-                </p>
-              </div>
-              <div className="mt-8 flex justify-center w-full">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 list-none p-0 m-0">
+            <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
+              <h3 className="text-[1.3rem] font-medium leading-[1.35]">
                 <Link
                   href="/engagement#projects"
-                  className="font-[family-name:var(--head)] font-semibold text-[0.98rem] text-white hover:text-[#88C0BA] transition-colors inline-flex items-center gap-1.5"
+                  className="inline-flex items-center gap-2 text-[var(--teal)] no-underline hover:underline underline-offset-[5px] group"
                 >
-                  Learn More &rarr;
-                </Link>
-              </div>
-            </div>
-
-            {/* Retainer */}
-            <div className="border border-[rgba(255,255,255,0.18)] bg-[#042C2A]/60 rounded-[18px] p-8 md:p-10 flex flex-col items-center text-center justify-between">
-              <div className="flex flex-col items-center w-full">
-                <div className="w-12 h-12 flex items-center justify-center mb-6 text-center">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  Projects
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M4 12 12 4M6 4h6v6" />
                   </svg>
-                </div>
-                <h3 className="text-xl md:text-[1.35rem] font-bold text-white mb-4 text-center">
-                  Retainer
-                </h3>
-                <p className="text-[0.95rem] text-[#C0D4D2] leading-relaxed text-center">
-                  Ongoing research and operations support. Regular deliverables, flexible scope, evolving partnership.
-                </p>
-              </div>
-              <div className="mt-8 flex justify-center w-full">
+                </Link>
+              </h3>
+              <p className="mt-4 text-[1.0625rem] leading-[1.7] text-[var(--ink)]">
+                A defined question, clear scope, and fixed timeline. Ideal for standalone valuations, audits, or market briefs.
+              </p>
+            </li>
+            <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
+              <h3 className="text-[1.3rem] font-medium leading-[1.35]">
                 <Link
                   href="/engagement#retainer"
-                  className="font-[family-name:var(--head)] font-semibold text-[0.98rem] text-white hover:text-[#88C0BA] transition-colors inline-flex items-center gap-1.5"
+                  className="inline-flex items-center gap-2 text-[var(--teal)] no-underline hover:underline underline-offset-[5px] group"
                 >
-                  Learn More &rarr;
-                </Link>
-              </div>
-            </div>
-
-            {/* Dedicated Team */}
-            <div className="border border-[rgba(255,255,255,0.18)] bg-[#042C2A]/60 rounded-[18px] p-8 md:p-10 flex flex-col items-center text-center justify-between">
-              <div className="flex flex-col items-center w-full">
-                <div className="w-12 h-12 flex items-center justify-center mb-6 text-center">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  Retainer
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M4 12 12 4M6 4h6v6" />
                   </svg>
-                </div>
-                <h3 className="text-xl md:text-[1.35rem] font-bold text-white mb-4 text-center">
-                  Dedicated Team
-                </h3>
-                <p className="text-[0.95rem] text-[#C0D4D2] leading-relaxed text-center">
-                  Extended team model. Our analysts working as part of your organisation with deep continuity.
-                </p>
-              </div>
-              <div className="mt-8 flex justify-center w-full">
+                </Link>
+              </h3>
+              <p className="mt-4 text-[1.0625rem] leading-[1.7] text-[var(--ink)]">
+                Ongoing support for work that recurs each month. Seamlessly adjusts to shifting priorities and ad-hoc requirements.
+              </p>
+            </li>
+            <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
+              <h3 className="text-[1.3rem] font-medium leading-[1.35]">
                 <Link
                   href="/engagement#dedicated-team"
-                  className="font-[family-name:var(--head)] font-semibold text-[0.98rem] text-white hover:text-[#88C0BA] transition-colors inline-flex items-center gap-1.5"
+                  className="inline-flex items-center gap-2 text-[var(--teal)] no-underline hover:underline underline-offset-[5px] group"
                 >
-                  Learn More &rarr;
+                  Dedicated Team
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M4 12 12 4M6 4h6v6" />
+                  </svg>
                 </Link>
-              </div>
-            </div>
-          </div>
+              </h3>
+              <p className="mt-4 text-[1.0625rem] leading-[1.7] text-[var(--ink)]">
+                Specialist analysts embedded directly inside your day-to-day workflows, operating as a true extension of your business.
+              </p>
+            </li>
+          </ul>
+
+          <Link
+            href="/engagement"
+            className="inline-block mt-14 font-[family-name:var(--head)] font-medium text-[1.05rem] text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)]"
+          >
+            How you can work with us
+          </Link>
         </div>
       </section>
 
