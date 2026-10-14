@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { servicesData } from "@/data/services";
 
 export async function generateStaticParams() {
-  return Object.keys(servicesData).map((slug) => ({ slug }));
+  return Object.keys(servicesData)
+    .filter((slug) => slug !== "strategy-research")
+    .map((slug) => ({ slug }));
 }
 
 export default async function ServiceTemplatePage({

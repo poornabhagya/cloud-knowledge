@@ -30,7 +30,8 @@ export const servicesData: Record<string, ServiceItem> = {
     intro: "Validate market opportunities before capital is committed, with company, sector, or policy strategy grounded in deep market intelligence and research.\n\nMost strategic decisions get made with incomplete information, because proper research takes time and depth that internal teams rarely have spare.\n\nCKS gives you a dedicated research team. Our analysts combine primary and secondary intelligence with rigorous analysis to answer the questions that actually determine outcomes without the cost or delay of building that capability in-house.\n\nWhether you need a single sector deep-dive, an ongoing intelligence function, or a dedicated analyst embedded in your strategy team, we scope the engagement around the decision you're trying to make.",
     offerIntro: "Our Strategy and Research services include:",
     subProducts: [
-      { title: "Deep-Dive Sector Reports", slug: "deep-dive-sector-reports", desc: "In-depth research into specific sectors (health, climate, education, and beyond) giving leadership the data and context needed before capital or policy decisions are made." },
+      { title: "Strategy Consulting", slug: "strategy-consulting", desc: "Extra capacity for professional services firms and direct support for businesses. We cover market sizing, due diligence, go to market strategy, competitor analysis and feasibility studies, white label if needed." },
+      { title: "Deep-Dive Sector Reports", slug: "deep-dive-sector-reports", desc: "In-depth research into specific sectors ( health, climate, education, and beyond) giving leadership the data and context needed before capital or policy decisions are made." },
       { title: "Emerging Trends & Market Outlook Briefs", slug: "emerging-trends-market-outlook", desc: "Concise, forward-looking briefings that track where a market or sector is heading, so decisions can be made ahead of the shift rather than in reaction to it." },
       { title: "Regulatory Landscape Analyses", slug: "regulatory-landscape-analyses", desc: "A clear, current map of the rules, obligations, and regulatory shifts that affect strategy, investment decisions, or market entry." },
       { title: "Best Practice Benchmarking Studies", slug: "best-practice-benchmarking", desc: "Structured comparisons against peers and global standards, showing exactly where performance stands and what closing the gap would take." },
@@ -59,7 +60,7 @@ export const servicesData: Record<string, ServiceItem> = {
     slug: "financial-modelling-planning",
     title: "Financial modelling and planning",
     headline: "We help you build financial models you can bet the business on.",
-    intro: "Develop the forecasts, budgets, and scenario models that support key business decisions, funding rounds, and long-term strategy.\n\nEvery major financial decision rests on a model somewhere and when that model is built in a rush, or by someone without the time to stress-test it properly, the numbers behind the decision are only as good as the assumptions no one checked.\n\nCKS gives you a dedicated financial modelling team. Our analysts build the forecasts, valuations, and planning frameworks that CFOs, investors, and boards can rely on.\n\nWhether you need a single valuation model, an ongoing FP&A function, or a dedicated analyst embedded in your finance team, we scope the engagement around your business, your assumptions, and the decisions riding on the output.",
+    intro: "Every major financial decision rests on a model. If nobody stress tested the assumptions, the decision is only as good as the guesswork. CKS builds the forecasts, valuations and planning frameworks that CFOs, investors and boards rely on. We scope each engagement, from one model to an embedded analyst, around the decisions at stake.",
     offerIntro: "Our Financial Modelling & Planning services include:",
     subProducts: [
       { title: "Financial Modelling & Valuations", slug: "financial-modelling-valuations", desc: "Build the models that underpin funding rounds, M&A, and board-level capital decisions." },
@@ -91,7 +92,7 @@ export const servicesData: Record<string, ServiceItem> = {
     slug: "data-driven-insights",
     title: "Data Driven Insights",
     headline: "We help you turn data into decisions.",
-    intro: "Convert complex data into predictive models and actionable intelligence that optimise decision-making across operations and strategy. Companies might be sitting on more data than they can act on because there's no dedicated team with the time or the skillset to dig in.\n\nCKS gives you that team. Our data analysts and data scientists work as an extension of your business, building the models, dashboards, and analysis that turn raw data into decisions you can act on without the cost or delay of hiring in-house.\n\nWhether you need a single forecasting model, an ongoing analytics function, or a dedicated analyst embedded in your team, we scope the engagement around your data, your tools, and the decisions you're trying to make.",
+    intro: "Most companies hold more data than they can use. CKS gives you the analysts and data scientists to change that. We build the forecasting models, dashboards and analysis that turn raw data into decisions. Engage us for a single project, an ongoing function or an embedded analyst, without the delay of hiring.",
     offerIntro: "Our Data-Driven Insights services include:",
     subProducts: [
       { title: "Predictive Analytics & Forecasting Models", slug: "predictive-analytics", desc: "Build models on your own data to anticipate demand, revenue, and risk before it hits." },
@@ -124,7 +125,7 @@ export const servicesData: Record<string, ServiceItem> = {
     slug: "marketing",
     title: "Marketing",
     headline: "We help you turn marketing into a growth engine someone actually owns.",
-    intro: "Turn marketing into consistent demand: positioning, content, and campaigns built for momentum, so you drive leads, brand strength, and measurable performance.\n\nMost founders have a backlog of marketing initiatives that never get done. The ideas are there. The strategy is there. What's missing is someone senior enough to own the execution, connect the channels, and make sure it all adds up to something measurable.\n\nCKS gives you that ownership. Our marketing specialists execute the positioning, content, and technical work that turns a marketing plan into consistent, measurable demand without the cost or delay of hiring a full in-house function.\n\nWhether you need a single project like a website rebuild, an ongoing content and SEO function, or a dedicated marketer embedded in your team, we scope the engagement around the growth you're trying to drive.",
+    intro: "Most founders have a backlog of marketing that never gets done. The ideas and strategy exist. What is missing is someone senior enough to own the execution. CKS marketing specialists deliver the positioning, content, SEO and campaigns that turn a plan into measurable demand, as a single project, an ongoing function or an embedded marketer.",
     offerIntro: "Our Marketing services include:",
     subProducts: [
       {
@@ -209,7 +210,7 @@ export const servicesData: Record<string, ServiceItem> = {
     slug: "retail-operations",
     title: "Operations & Performance",
     headline: "We help you run a tighter operation.",
-    intro: "Enhance retail and business operations through inventory optimisation, customer analytics, and data-driven performance management.\n\nRetail margins get won or lost in the details. Most operations teams know something's off but don't have the bandwidth to dig into where, or the analytical horsepower to fix it properly.\n\nCKS gives you that capacity. Our analysts work through your inventory, sales, and customer data to find where efficiency is leaking and build the systems that keep it from leaking again without the cost or delay of hiring in-house.\n\nWhether you need a single operational audit, an ongoing performance-management function, or a dedicated analyst embedded in your operations team, we scope the engagement around the numbers you're trying to move.",
+    intro: "Retail margins are won or lost in the detail. Most operations teams know something is off but lack the bandwidth to find it. CKS analysts work through your inventory, sales and customer data, find where efficiency is leaking and build the systems that stop it. We scope every engagement around the numbers you need to move.",
     offerIntro: "Our Operations & Performance Optimisation services include:",
     subProducts: [
       {
@@ -294,7 +295,7 @@ export const servicesData: Record<string, ServiceItem> = {
     slug: "cybersecurity",
     title: "Cybersecurity",
     headline: "We help you find the gaps before attackers do.",
-    intro: "Risk assessments, controls, policies, penetration testing, and incident preparedness, delivered by senior cybersecurity specialists.\n\nMost organisations don't find out their security has a gap until something has already gone wrong. Building a security function that catches problems before that point takes senior, specialized expertise. Most teams can't justify hiring full-time until the risk becomes too big to ignore.\n\nCKS embeds a specialist inside your business who finds the vulnerabilities before an attacker does, builds the defences that actually hold, and keeps your security posture current as your systems and the threat landscape evolve without the cost or delay of building that capability in-house.\n\nWhether you need a single penetration test, an ongoing security operations function, or a dedicated specialist embedded in your team, we scope the engagement around your systems, your risk profile, and your compliance requirements.",
+    intro: "Most organisations discover a security gap only after something goes wrong, and few can justify a full time senior specialist before then. CKS embeds one in your business to find vulnerabilities before attackers do, build defences that hold and keep your posture current. We cover penetration testing, risk assessments, policies and incident preparedness.",
     offerIntro: "Our Cybersecurity services include:",
     subProducts: [
       {

@@ -1389,7 +1389,41 @@ export const subServicesData: Record<string, any> = {
       title: "CKS takes care of the operational work so growing companies can scale faster.",
       btnText: "Talk to an expert"
     }
+  },
+
+  "strategy-consulting": {
+    hero: {
+      title: "Rigorous strategy work, under your brand or ours",
+      subtitle: "Whether you are a professional services firm that needs extra delivery capacity, or an organisation weighing a major strategic move, CKS provides the market sizing, due diligence and competitive analysis that sound decisions are built on."
+    },
+    overTitle: "STRATEGY CONSULTING",
+    intro: {
+      title: "Extra capacity for firms, clear answers for decision makers",
+      desc: "CKS Strategy Consulting works in two ways. For consultancies and advisory firms, we act as a white label extension of your team, delivering analysis on your engagements, in your format, under your name. For SMEs and corporates, we work with you directly to answer the questions that come before a major commitment: how big is the opportunity, is the business case sound, who are we up against, and how do we win.\n\nEither way, each engagement is scoped around the decision at hand and combines market data, financial analysis and competitive research into clear, evidence based recommendations."
+    },
+    whatWeDo: [
+      { title: "Market Sizing & Opportunity Assessment", desc: "Validate addressable markets, growth drivers, and demand dynamics before committing resources." },
+      { title: "Commercial Due Diligence", desc: "Independent assessment of target companies, market position, customer traction, and key risks." },
+      { title: "Go-to-Market Strategies", desc: "Data-driven market entry, positioning, pricing frameworks, and distribution channel analysis." },
+      { title: "Competitor Intelligence & Benchmarking", desc: "Comprehensive peer analysis, product comparisons, and strategic positioning maps." }
+    ],
+    valueFromCks: [
+      { title: "White Label Delivery", desc: "Seamless delivery under your brand, in your templates, ready for client presentation." },
+      { title: "Rigorous Evidence Base", desc: "Every recommendation is backed by primary intelligence, secondary data, and deep financial rigor." },
+      { title: "Flexible Capacity", desc: "Scale capacity up or down to match client pipeline without the fixed cost of hiring in-house." }
+    ],
+    howItWorks: [
+      { step: "01", title: "Frame the Decision", desc: "Define key strategic questions, hypotheses, and required outputs." },
+      { step: "02", title: "Data Collection & Analysis", desc: "Synthesise market data, expert interviews, and competitive intelligence." },
+      { step: "03", title: "Synthesis & Strategic Recommendations", desc: "Deliver actionable, client-ready presentations and financial models." }
+    ],
+    faqs: [
+      { question: "How does white-label consulting work?", answer: "We work directly into your team's workflow, using your presentation formats and standards, operating as a seamless extension of your firm." },
+      { question: "What sectors do you cover?", answer: "Our team brings cross-sector experience spanning financial services, technology, healthcare, education, retail, and sustainability." }
+    ],
+    cta: {
+      title: "Ready to structure the right strategic engagement?",
+      btnText: "Talk to an expert"
+    }
   }
-
-
 };

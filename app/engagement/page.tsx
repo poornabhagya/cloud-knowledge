@@ -262,8 +262,8 @@ export default function EngagementPage() {
               </h3>
               <br/>
               <p className="text-[1.05rem] text-[var(--ink)] leading-relaxed">
-  <span className="font-medium text-[var(--teal-muted)]">Project-Based</span> fits it has clean scope...
-</p>
+                <span className="font-medium text-[var(--teal-muted)]">Dedicated Team</span> offers the deepest continuity and integration.
+              </p>
             </div>
           </div>
         </div>
