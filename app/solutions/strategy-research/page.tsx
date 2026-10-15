@@ -47,20 +47,10 @@ export default function StrategyResearchPage() {
           </div>
           <div className="text-[1.15rem] leading-[1.7] max-w-[34rem] text-[var(--ink)] space-y-5">
             <p>
-              Validate market opportunities before capital is committed, with company, sector, or policy strategy grounded in deep market intelligence and research.
+               Every big decision needs a clear strategy and the evidence behind it. CKS helps leadership decide where to compete, how to enter and whether the numbers stack up. Our work spans sector deep dives, market intelligence, market sizing, commercial due diligence, go to market strategy and feasibility studies, all ending in recommendations you can act on.
             </p>
             <br/>
-            <p>
-              Most strategic decisions get made with incomplete information, because proper research takes time and depth that internal teams rarely have spare.
-            </p>
-            <br/>
-            <p>
-              CKS gives you a dedicated research team. Our analysts combine primary and secondary intelligence with rigorous analysis to answer the questions that actually determine outcomes without the cost or delay of building that capability in-house.
-            </p>
-            <br/>
-            <p>
-              Whether you need a single sector deep-dive, an ongoing intelligence function, or a dedicated analyst embedded in your strategy team, we scope the engagement around the decision you&apos;re trying to make.
-            </p>
+            
           </div>
         </div>
       </section>
@@ -210,28 +200,20 @@ export default function StrategyResearchPage() {
       )}
 
       {/* CTA Band */}
-      <section className="py-22 bg-[var(--teal)] text-[var(--cream)]">
-        <div className="wrap grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-10 md:gap-16 items-center">
+      <section className="py-20 md:py-24 bg-[#0B3B36]" aria-label="Call to Action">
+        <div className="wrap flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           <div>
-            <h2 className="text-[clamp(2rem,3.8vw,3rem)] text-[var(--cream)] max-w-[22ch] leading-[1.28] tracking-[-0.015em] font-semibold">
-              CKS takes care of the operational work so growing companies can scale faster.
+            <h2 className="text-white text-3xl md:text-4xl font-bold max-w-2xl leading-[1.28] tracking-[-0.015em] text-left">
+              Need extra strategy capacity, or a clear answer on your next move?
             </h2>
           </div>
-          <div className="justify-self-start md:justify-self-end flex items-center gap-6 flex-wrap">
+          <div className="flex-shrink-0">
             <Link
               href="/contact"
-              className="bg-[var(--cream)] text-[var(--teal)] hover:bg-white text-[1.05rem] px-8 py-4 rounded-full font-[family-name:var(--head)] font-medium inline-flex items-center gap-2.5 transition-colors no-underline group"
+              className="rounded-full bg-white text-[#0B3B36] font-medium px-6 py-3 flex items-center gap-2 hover:bg-gray-100 transition-colors no-underline whitespace-nowrap group"
             >
-              Talk to an expert
-              <svg
-                className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+              <span>Talk to an expert</span>
+              <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

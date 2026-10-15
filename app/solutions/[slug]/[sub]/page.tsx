@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 
   Object.entries(servicesData).forEach(([slug, service]) => {
     service.subProducts.forEach((prod) => {
-      if (prod.slug) {
+      if (prod.slug && !(slug === "strategy-research" && prod.slug === "strategy-consulting")) {
         paths.push({
           slug: slug,
           sub: prod.slug,
@@ -61,7 +61,7 @@ export default async function SubServicePage({
               </Link>
             </li>
             <li className="before:content-['/'] before:mr-2 before:text-[#8B8B83] text-[var(--ink)]">
-              {subService.intro.title}
+              {subService.breadcrumb || subService.title || subService.intro.title}
             </li>
           </ol>
         </div>
@@ -116,7 +116,9 @@ export default async function SubServicePage({
       {subService.whatWeDo && subService.whatWeDo.length > 0 && (
         <section className="py-24 bg-[#F8F7F3]">
           <div className="wrap">
-            <h2 className="text-[2rem] text-[var(--teal)] font-semibold mb-10 text-center">What we can do for you</h2>
+            <h2 className="text-[2rem] text-[var(--teal)] font-semibold mb-10 text-center">
+              {subService.whatWeDoTitle || "What we can do for you"}
+            </h2>
             <br />
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
               {subService.whatWeDo.map((item: any, idx: number) => (
@@ -156,11 +158,48 @@ export default async function SubServicePage({
         </section>
       )}
 
-      {/* The value you get from CKS - White Bg, Cream Cards */}
-      {subService.valueFromCks && subService.valueFromCks.length > 0 && (
+      {/* Two-Column Comparison Benefit Cards */}
+      {subService.benefitsColumns && subService.benefitsColumns.length > 0 && (
+        <section className="py-24 bg-white" aria-label="Benefits Comparison">
+          <div className="wrap">
+            <div className="text-center mb-14">
+              <h2 className="text-[2rem] text-[var(--teal)] font-semibold">
+                {subService.benefitsTitle || "The Benefit You Get from CKS"}
+              </h2>
+              <br />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+              {subService.benefitsColumns.map((col: any, colIdx: number) => (
+                <div key={colIdx} className="bg-[#F8F7F3] rounded-[16px] p-8 md:p-10 border border-[#E5E7EB] flex flex-col">
+                  <h3 className="text-[1.3rem] font-semibold text-[var(--teal)] pb-5 mb-8 border-b border-[rgba(4,61,59,0.12)]">
+                    {col.heading}
+                  </h3>
+                  <ul className="space-y-5 list-none p-0 m-0 flex-1 flex flex-col justify-between">
+                    {col.items.map((item: any, itemIdx: number) => (
+                      <li key={itemIdx} className="bg-white rounded-[12px] p-6 border border-[#E5E7EB]/80 shadow-xs">
+                        <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-2.5">
+                          {item.title}
+                        </h4>
+                        <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
+                          {item.desc}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* The value you get from CKS - White Bg, Cream Cards (Standard single grid) */}
+      {!subService.benefitsColumns && subService.valueFromCks && subService.valueFromCks.length > 0 && (
         <section className="py-24 bg-white">
           <div className="wrap">
-            <h2 className="text-[2rem] text-[var(--teal)] font-semibold mb-10 text-center">The value you get from CKS</h2>
+            <h2 className="text-[2rem] text-[var(--teal)] font-semibold mb-10 text-center">
+              {subService.benefitsTitle || "The value you get from CKS"}
+            </h2>
             <br />
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
               {subService.valueFromCks.map((item: any, idx: number) => (
@@ -183,8 +222,7 @@ export default async function SubServicePage({
         <section className="py-24 bg-[#F8F7F3]">
           <div className="wrap">
             <div className="text-center mb-14">
-              <span className="text-[0.85rem] font-bold text-[#5CB39F] tracking-wider uppercase block">HOW IT WORKS</span>
-              <h2 className="text-[2rem] text-[var(--teal)] font-semibold mt-2">A clear path from data to decisions</h2>
+              <h2 className="text-[2rem] text-[var(--teal)] font-semibold">HOW IT WORKS</h2>
               <br />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -232,18 +270,20 @@ export default async function SubServicePage({
       )}
 
       {/* CTA Band */}
-      <section className="py-24 bg-[#5CB39F] text-center flex flex-col items-center">
-        <div className="wrap flex flex-col items-center">
-          <h2 className="text-[clamp(2rem,3.8vw,3rem)] text-[var(--ink)] max-w-[22ch] leading-[1.28] font-semibold mx-auto">
-            {subService.cta ? subService.cta.title : "Ready to plan with confidence instead of guesswork?"}
-          </h2>
-          <br />
-          <div className="mt-6 flex justify-center">
+      <section className="py-20 md:py-24 bg-[#0B3B36]" aria-label="Call to Action">
+        <div className="wrap flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+          <div>
+            <h2 className="text-white text-3xl md:text-4xl font-bold max-w-2xl leading-[1.28] tracking-[-0.015em] text-left">
+              {subService.cta ? subService.cta.title : "Need extra strategy capacity, or a clear answer on your next move?"}
+            </h2>
+          </div>
+          <div className="flex-shrink-0">
             <Link
               href="/contact"
-              className="bg-[var(--teal)] text-white hover:bg-[#032a28] text-[1.05rem] px-8 py-4 rounded-md font-[family-name:var(--head)] font-medium inline-flex items-center gap-2.5 transition-colors no-underline"
+              className="rounded-full bg-white text-[#0B3B36] font-medium px-6 py-3 flex items-center gap-2 hover:bg-gray-100 transition-colors no-underline whitespace-nowrap group"
             >
-              {subService.cta ? subService.cta.btnText : "Talk with an expert"}
+              <span>{subService.cta ? subService.cta.btnText : "Talk to an expert"}</span>
+              <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

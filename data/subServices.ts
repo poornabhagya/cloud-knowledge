@@ -1392,37 +1392,129 @@ export const subServicesData: Record<string, any> = {
   },
 
   "strategy-consulting": {
+    breadcrumb: "Strategy Consulting",
     hero: {
       title: "Rigorous strategy work, under your brand or ours",
-      subtitle: "Whether you are a professional services firm that needs extra delivery capacity, or an organisation weighing a major strategic move, CKS provides the market sizing, due diligence and competitive analysis that sound decisions are built on."
+      subtitle: "Whether you are a professional services firm that needs extra delivery capacity, or an organisation weighing a major strategic move, CKS provides the market sizing, due diligence and competitive analysis that sound decisions are built on.",
+      btn1: "Book a scoping call",
+      btn2: "Request a data readiness check"
     },
     overTitle: "STRATEGY CONSULTING",
     intro: {
       title: "Extra capacity for firms, clear answers for decision makers",
       desc: "CKS Strategy Consulting works in two ways. For consultancies and advisory firms, we act as a white label extension of your team, delivering analysis on your engagements, in your format, under your name. For SMEs and corporates, we work with you directly to answer the questions that come before a major commitment: how big is the opportunity, is the business case sound, who are we up against, and how do we win.\n\nEither way, each engagement is scoped around the decision at hand and combines market data, financial analysis and competitive research into clear, evidence based recommendations."
     },
+    whatWeDoTitle: "What CKS Does for You",
     whatWeDo: [
-      { title: "Market Sizing & Opportunity Assessment", desc: "Validate addressable markets, growth drivers, and demand dynamics before committing resources." },
-      { title: "Commercial Due Diligence", desc: "Independent assessment of target companies, market position, customer traction, and key risks." },
-      { title: "Go-to-Market Strategies", desc: "Data-driven market entry, positioning, pricing frameworks, and distribution channel analysis." },
-      { title: "Competitor Intelligence & Benchmarking", desc: "Comprehensive peer analysis, product comparisons, and strategic positioning maps." }
+      {
+        title: "Size your total addressable market",
+        desc: "Estimate the full revenue opportunity, then narrow it to the share that can realistically be served and captured."
+      },
+      {
+        title: "Commercial due diligence",
+        desc: "Assess a target’s market, customers, competitive position and growth assumptions before an investment or acquisition."
+      },
+      {
+        title: "Go to market strategy",
+        desc: "Define target segments, positioning, pricing, channels and the sequence for entering a market or launching an offer."
+      },
+      {
+        title: "Competitor analysis",
+        desc: "Map who you compete with, how they position, price and perform, and where the gaps are."
+      },
+      {
+        title: "Feasibility studies",
+        desc: "Test whether a project, venture or expansion stands up commercially, operationally and financially before resources are committed."
+      }
     ],
-    valueFromCks: [
-      { title: "White Label Delivery", desc: "Seamless delivery under your brand, in your templates, ready for client presentation." },
-      { title: "Rigorous Evidence Base", desc: "Every recommendation is backed by primary intelligence, secondary data, and deep financial rigor." },
-      { title: "Flexible Capacity", desc: "Scale capacity up or down to match client pipeline without the fixed cost of hiring in-house." }
+    benefitsTitle: "The Benefit You Get from CKS",
+    benefitsColumns: [
+      {
+        heading: "For professional services firms",
+        items: [
+          {
+            title: "Scale delivery without hiring",
+            desc: "Take on more engagements, or larger ones, without adding permanent headcount."
+          },
+          {
+            title: "Your brand, your client relationship",
+            desc: "Work is delivered in your format where required and under your name, and we stay behind the scenes."
+          },
+          {
+            title: "Capacity that fits the engagement",
+            desc: "A team assembled around what the project needs, from a single workstream to the full analysis."
+          }
+        ]
+      },
+      {
+        heading: "For organisations making a strategic decision",
+        items: [
+          {
+            title: "Know the size of the prize",
+            desc: "Understand the real opportunity and your realistic share of it before you invest."
+          },
+          {
+            title: "Test the deal before you sign",
+            desc: "Validate the growth story and assumptions behind a valuation, not just the headline numbers."
+          },
+          {
+            title: "Strategy capability without the overhead",
+            desc: "Senior analytical support for a specific decision, without building a strategy team in house."
+          }
+        ]
+      }
     ],
+    howItWorksTitle: "HOW IT WORKS",
     howItWorks: [
-      { step: "01", title: "Frame the Decision", desc: "Define key strategic questions, hypotheses, and required outputs." },
-      { step: "02", title: "Data Collection & Analysis", desc: "Synthesise market data, expert interviews, and competitive intelligence." },
-      { step: "03", title: "Synthesis & Strategic Recommendations", desc: "Deliver actionable, client-ready presentations and financial models." }
+      {
+        step: "01",
+        title: "Scope the engagement",
+        desc: "We agree the questions to be answered, the services required and, for firms, which workstreams we take on."
+      },
+      {
+        step: "02",
+        title: "Research and analyse",
+        desc: "We gather market, customer, competitor and financial data and test it against the decision."
+      },
+      {
+        step: "03",
+        title: "Build the recommendation",
+        desc: "We turn the findings into a clear answer, with the evidence and numbers behind it."
+      },
+      {
+        step: "04",
+        title: "Deliver",
+        desc: "For firms, we hand over finished work in your format, ready for your client; for organisations, we present the findings directly to your team or board."
+      }
     ],
     faqs: [
-      { question: "How does white-label consulting work?", answer: "We work directly into your team's workflow, using your presentation formats and standards, operating as a seamless extension of your firm." },
-      { question: "What sectors do you cover?", answer: "Our team brings cross-sector experience spanning financial services, technology, healthcare, education, retail, and sustainability." }
+      {
+        question: "Who do you work with?",
+        answer: "Primarily professional services firms, such as consultancies and advisory firms, that need additional research and analysis capacity on client engagements. We also work directly with SMEs and corporates across sectors."
+      },
+      {
+        question: "Do you work white label?",
+        answer: "Yes. For professional services firms, we deliver work in your templates and branding, and the client relationship remains entirely yours."
+      },
+      {
+        question: "Can you take on part of an engagement rather than the whole thing?",
+        answer: "Yes. We can deliver a single workstream, such as the market sizing within a wider due diligence, or the full analysis."
+      },
+      {
+        question: "Can services be combined?",
+        answer: "Yes, and they often are. Market sizing and competitor analysis typically feed directly into a go to market strategy or feasibility study."
+      },
+      {
+        question: "What do we receive at the end?",
+        answer: "A written report, a presentation or both, with supporting models such as market sizing or financial projections where the engagement requires them."
+      },
+      {
+        question: "How long does an engagement take?",
+        answer: "It depends on scope. A focused market sizing exercise can be completed much faster than a full feasibility study or due diligence engagement. We confirm timelines at the scoping stage."
+      }
     ],
     cta: {
-      title: "Ready to structure the right strategic engagement?",
+      title: "Need extra strategy capacity, or a clear answer on your next move?",
       btnText: "Talk to an expert"
     }
   }
