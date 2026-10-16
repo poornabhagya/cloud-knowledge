@@ -436,13 +436,9 @@ export default function Home() {
 
           {/* Form */}
           <form className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12" action="#" method="post" noValidate>
-            <div className="field">
-              <input type="text" id="first-name" name="first-name" required placeholder=" " />
-              <label htmlFor="first-name">First Name <span className="req" aria-hidden="true">*</span></label>
-            </div>
-            <div className="field">
-              <input type="text" id="last-name" name="last-name" required placeholder=" " />
-              <label htmlFor="last-name">Last Name <span className="req" aria-hidden="true">*</span></label>
+            <div className="field sm:col-span-2">
+              <input type="text" id="full-name" name="fullName" required placeholder=" " />
+              <label htmlFor="full-name">Full Name <span className="req" aria-hidden="true">*</span></label>
             </div>
             <div className="field">
               <input type="text" id="organisation" name="organisation" placeholder=" " />
