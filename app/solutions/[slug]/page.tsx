@@ -78,30 +78,32 @@ export default async function ServiceTemplatePage({
             {service.subProducts.map((prod) => (
               <li
                 key={prod.title}
-                className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 md:p-9 flex flex-col justify-start transition-[border-color,transform] duration-150 hover:border-[var(--teal-muted)] hover:-translate-y-0.5"
+                className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 md:p-9 flex flex-col justify-between h-full transition-[border-color,transform] duration-150 hover:border-[var(--teal-muted)] hover:-translate-y-0.5"
               >
-                <span
-                  className="w-11 h-11 rounded-[10px] bg-[rgba(4,61,59,0.08)] grid place-items-center"
-                  aria-hidden="true"
-                >
-                  <svg
-                    className="w-5.5 h-5.5 stroke-[var(--teal)] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect x="4" y="4" width="16" height="16" rx="3" />
-                    <path d="M8 12h8M12 8v8" />
-                  </svg>
-                </span>
-                <br/>
-                <h3 className="text-[1.22rem] font-medium mt-6 mb-3.5 text-[var(--ink)] leading-[1.35] tracking-[-0.01em]">
-                  <Link href={`/solutions/${service.slug}/${prod.slug || '#'}`} className="hover:text-[var(--teal)] no-underline text-inherit">
-                    {prod.title}
-                  </Link>
-                </h3>
-                <br/>
-                <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
-                  {prod.desc}
-                </p>
+                <div>
+                  <div className="mb-3.5">
+                    <span
+                      className="w-11 h-11 rounded-[10px] bg-[rgba(4,61,59,0.08)] grid place-items-center mb-6"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        className="w-5.5 h-5.5 stroke-[var(--teal)] fill-none stroke-[1.6] stroke-linecap-round stroke-linejoin-round"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect x="4" y="4" width="16" height="16" rx="3" />
+                        <path d="M8 12h8M12 8v8" />
+                      </svg>
+                    </span>
+                    <h3 className="text-[1.22rem] font-medium text-[var(--ink)] leading-[1.35] tracking-[-0.01em] min-h-[3.5rem] flex items-start">
+                      <Link href={`/solutions/${service.slug}/${prod.slug || '#'}`} className="hover:text-[var(--teal)] no-underline text-inherit block w-full">
+                        {prod.title}
+                      </Link>
+                    </h3>
+                  </div>
+                  <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
+                    {prod.desc}
+                  </p>
+                </div>
                 <Link
                   href={`/solutions/${service.slug}/${prod.slug || '#'}`}
                   className="mt-auto pt-8 inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[0.95rem] text-[var(--teal)] no-underline self-start hover:underline underline-offset-[5px] group"
@@ -134,9 +136,10 @@ export default async function ServiceTemplatePage({
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
               {service.whyCks.map((item: any, idx: number) => (
-                <li key={idx} className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 shadow-sm">
-                  <h3 className="text-[1.2rem] font-medium text-[var(--teal)] mb-3">{item.title}</h3>
-                  <br/>
+                <li key={idx} className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 shadow-sm flex flex-col h-full">
+                  <h3 className="text-[1.2rem] font-medium text-[var(--teal)] mb-3 min-h-[3rem] md:min-h-[3.25rem] flex items-start">
+                    {item.title}
+                  </h3>
                   <p className="text-[1.05rem] text-[var(--ink)] leading-[1.65]">{item.desc}</p>
                 </li>
               ))}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { articlesData } from "@/data/articles";
+import { CATEGORY_IMAGES, getCoverImage } from "@/data/categoryImages";
 
 const filterTags = [
   "All",
@@ -115,10 +116,15 @@ export default function InsightsPage() {
                 {currentArticles.map((item) => (
                   <li
                     key={item.slug}
-                    className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] overflow-hidden flex flex-col transition-[border-color,transform] duration-150 hover:border-[var(--teal-muted)] hover:-translate-y-0.5"
+                    className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] overflow-hidden flex flex-col transition-[border-color,transform] duration-150 hover:border-[var(--teal-muted)] hover:-translate-y-0.5 group"
                   >
-                    <div className="aspect-[16/9] bg-[#E4E0D8] grid place-items-center text-[0.85rem] text-[var(--grey-text)]">
-                      Cover image, 16:9
+                    <div className="aspect-[16/9] w-full bg-[#E4E0D8] overflow-hidden relative">
+                      <img
+                        src={getCoverImage(item.category)}
+                        alt={`${item.category} - ${item.title}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
                     <div className="p-6 md:p-7 flex flex-col flex-1 items-start">
                       <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--teal)] bg-[rgba(4,61,59,0.08)] py-1 px-3 rounded-full">

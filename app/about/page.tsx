@@ -34,14 +34,17 @@ export default function AboutPage() {
 
       {/* Page Hero */}
       <section className="py-16 md:py-20">
-        <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
-          <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2]">
-            About Ceylon Knowledge Services (CKS)
-          </h1>
-          <br />
-          <p className="text-[1.2rem] leading-[1.65] max-w-[32rem] text-[var(--ink)]">
-            We extend your team’s capabilities so you can focus on what matters most.
-          </p>
+        <div className="wrap grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div>
+            <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2] font-semibold tracking-[-0.015em]">
+              About Ceylon Knowledge Services (CKS)
+            </h1>
+          </div>
+          <div>
+            <p className="text-[1.2rem] leading-[1.65] max-w-[32rem] text-[var(--ink)]">
+              We extend your team’s capabilities so you can focus on what matters most.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -82,10 +85,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Why We Do This (Heading & Pull Quote Left, Body Right) */}
+      {/* 2. Why We Do This (Heading & Pull Quote Top, 3-Card Grid Below) */}
       <section className="py-24 bg-white" id="why-we-do-this">
-        <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
-          <div>
+        <div className="wrap">
+          <div className="max-w-[50rem]">
             <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] text-[var(--teal)] leading-[1.22]">
               Why We Do This
             </h2>
@@ -98,25 +101,39 @@ export default function AboutPage() {
               </footer>
             </blockquote>
           </div>
-          <div className="space-y-6 text-[1.1rem] leading-[1.6] text-[var(--ink)]">
-            <div>
-              <h3 className="text-[1.25rem] font-medium text-[var(--teal)] mb-2">Context Matters</h3>
-              <p>
-                Nothing we deliver is templated every engagement starts from your context. We take time to understand your business, your competitive position, and your strategic priorities so every recommendation lands.
-              </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="min-h-[2.5rem] flex items-start text-lg font-bold text-[#0B3B36] mb-3">
+                  Context Matters
+                </h3>
+                <p className="text-[1rem] leading-[1.6] text-[var(--ink)]">
+                  Nothing we deliver is templated every engagement starts from your context. We take time to understand your business, your competitive position, and your strategic priorities so every recommendation lands.
+                </p>
+              </div>
             </div>
-            <br />
-            <div>
-              <h3 className="text-[1.25rem] font-medium text-[var(--teal)] mb-2">Quality Over Volume</h3>
-              <p>
-                We believe in depth over speed. Rigorous analysis, validated data, and well-considered recommendations—the kind of work that actually moves the needle on decisions.
-              </p>
+
+            <div className="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="min-h-[2.5rem] flex items-start text-lg font-bold text-[#0B3B36] mb-3">
+                  Quality Over Volume
+                </h3>
+                <p className="text-[1rem] leading-[1.6] text-[var(--ink)]">
+                  We believe in depth over speed. Rigorous analysis, validated data, and well-considered recommendations—the kind of work that actually moves the needle on decisions.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-[1.25rem] font-medium text-[var(--teal)] mb-2">Partnership Mindset</h3>
-              <p>
-                You're not outsourcing a task; you're gaining a strategic partner. We're invested in your success and take ownership of outcomes, not just deliverables.
-              </p>
+
+            <div className="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm flex flex-col justify-between h-full">
+              <div>
+                <h3 className="min-h-[2.5rem] flex items-start text-lg font-bold text-[#0B3B36] mb-3">
+                  Partnership Mindset
+                </h3>
+                <p className="text-[1rem] leading-[1.6] text-[var(--ink)]">
+                  You're not outsourcing a task; you're gaining a strategic partner. We're invested in your success and take ownership of outcomes, not just deliverables.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -136,53 +153,58 @@ export default function AboutPage() {
           </div>
 
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 list-none p-0 m-0 [counter-reset:step]">
-            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step]">
+            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step] flex flex-col h-full">
               <span className="block font-[family-name:var(--head)] font-semibold text-[1.6rem] text-[var(--teal)] leading-none mb-4">
                 01
               </span>
-              <h3 className="text-[1.1rem] font-medium text-[var(--ink)]">Focused Scope</h3>
-              <br />
-              <p className="mt-2 text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
+              <h3 className="text-[1.1rem] font-medium text-[var(--ink)] min-h-[2.75rem] md:min-h-[3rem] flex items-start mb-2">
+                Focused Scope<br className="hidden md:inline" />
+              </h3>
+              <p className="text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
                 We start with crystal clarity on what you need and why. No gold-plating, no unnecessary scope creep—just what matters for your decision.
               </p>
             </li>
-            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step]">
+            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step] flex flex-col h-full">
               <span className="block font-[family-name:var(--head)] font-semibold text-[1.6rem] text-[var(--teal)] leading-none mb-4">
                 02
               </span>
-              <h3 className="text-[1.1rem] font-medium text-[var(--ink)]">Rigorous Execution</h3>
-              <br />
-              <p className="mt-2 text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
+              <h3 className="text-[1.1rem] font-medium text-[var(--ink)] min-h-[2.75rem] md:min-h-[3rem] flex items-start mb-2">
+                Rigorous Execution
+              </h3>
+              <p className="text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
                 Whether it's data validation, market research, or financial modelling, we sweat the details. Your insights are only as good as the foundations beneath them.
               </p>
             </li>
-            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step]">
+            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step] flex flex-col h-full">
               <span className="block font-[family-name:var(--head)] font-semibold text-[1.6rem] text-[var(--teal)] leading-none mb-4">
                 03
               </span>
-              <h3 className="text-[1.1rem] font-medium text-[var(--ink)]">Human Expertise</h3>
-              <br />
-              <p className="mt-2 text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
+              <h3 className="text-[1.1rem] font-medium text-[var(--ink)] min-h-[2.75rem] md:min-h-[3rem] flex items-start mb-2">
+                Human Expertise<br className="hidden md:inline" />
+              </h3>
+              <p className="text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
                 Modern tools and technology governed by human ingenuity, oversight, and judgement.
               </p>
             </li>
-            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step]">
+            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step] flex flex-col h-full">
               <span className="block font-[family-name:var(--head)] font-semibold text-[1.6rem] text-[var(--teal)] leading-none mb-4">
                 04
               </span>
-              <h3 className="text-[1.1rem] font-medium text-[var(--ink)]">Clear Communication</h3>
-              <br />
-              <p className="mt-2 text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
+              <h3 className="text-[1.1rem] font-medium text-[var(--ink)] min-h-[2.75rem] md:min-h-[3rem] flex items-start mb-2">
+                Clear Communication
+              </h3>
+              <p className="text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
                 Complex analysis shouldn't be opaque. We translate findings into plain language and actionable recommendations your team can run with immediately.
               </p>
             </li>
-            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step]">
+            <li className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] p-6 relative [counter-increment:step] flex flex-col h-full">
               <span className="block font-[family-name:var(--head)] font-semibold text-[1.6rem] text-[var(--teal)] leading-none mb-4">
                 05
               </span>
-              <h3 className="text-[1.1rem] font-medium text-[var(--ink)]">Scalable Partnership</h3>
-              <br />
-              <p className="mt-2 text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
+              <h3 className="text-[1.1rem] font-medium text-[var(--ink)] min-h-[2.75rem] md:min-h-[3rem] flex items-start mb-2">
+                Scalable Partnership
+              </h3>
+              <p className="text-[0.95rem] text-[var(--grey-text)] leading-relaxed">
                 Start with one project or become a strategic partner. We grow with your needs and maintain continuity as priorities shift.
               </p>
             </li>
@@ -211,6 +233,12 @@ export default function AboutPage() {
                   Single engagement for a specific challenge. Clean deliverables, defined timeline, focused scope.
                 </p>
               </div>
+              <Link
+                href="/engagement#project-based"
+                className="flex items-center text-sm font-semibold text-[#0B3B36] mt-4 hover:underline"
+              >
+                Learn more ↗
+              </Link>
             </div>
 
             <div className="bg-[#F8F7F4] border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 flex flex-col justify-between">
@@ -220,6 +248,12 @@ export default function AboutPage() {
                   Ongoing research and operations support. Regular deliverables, flexible scope, evolving partnership.
                 </p>
               </div>
+              <Link
+                href="/engagement#retainer"
+                className="flex items-center text-sm font-semibold text-[#0B3B36] mt-4 hover:underline"
+              >
+                Learn more ↗
+              </Link>
             </div>
 
             <div className="bg-[#F8F7F4] border border-[rgba(45,45,39,0.1)] rounded-[16px] p-8 flex flex-col justify-between">
@@ -229,6 +263,12 @@ export default function AboutPage() {
                   Extended team model. Our analysts working as part of your organisation with deep continuity.
                 </p>
               </div>
+              <Link
+                href="/engagement#dedicated-team"
+                className="flex items-center text-sm font-semibold text-[#0B3B36] mt-4 hover:underline"
+              >
+                Learn more ↗
+              </Link>
             </div>
           </div>
         </div>

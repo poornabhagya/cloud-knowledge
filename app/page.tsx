@@ -2,6 +2,17 @@
 
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import {
+  Users,
+  Target,
+  TrendingUp,
+  PieChart,
+  Layers,
+  Database,
+  Megaphone,
+  Settings,
+  ShieldCheck,
+} from "lucide-react";
 import { testimonialsList } from "@/data/testimonials";
 
 export default function Home() {
@@ -87,77 +98,121 @@ export default function Home() {
 
           {/* 3x3 Grid of Tiles */}
           <div className="grid w-full max-w-full grid-cols-3 gap-[10px] overflow-hidden">
-            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)]">
-              Leadership
+            {/* 1. Leadership */}
+            <div className="relative aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)] overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Users className="w-8 h-8 sm:w-9 sm:h-9 text-[#0B3B36]" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 w-full text-left">Leadership</span>
             </div>
+
+            {/* 2. Strategy */}
             <Link
               href="/solutions/strategy-research"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
+              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
             >
-              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Strategy
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Target className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
+                <span>Strategy</span>
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
-            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)]">
-              Sales
+
+            {/* 3. Sales */}
+            <div className="relative aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)] overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <TrendingUp className="w-8 h-8 sm:w-9 sm:h-9 text-[#0B3B36]" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 w-full text-left">Sales</span>
             </div>
+
+            {/* 4. Finance */}
             <Link
               href="/solutions/financial-modelling-planning"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
+              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
             >
-              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Finance
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <PieChart className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
+                <span>Finance</span>
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
-            <div className="aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)]">
-              Product
+
+            {/* 5. Product */}
+            <div className="relative aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)] overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Layers className="w-8 h-8 sm:w-9 sm:h-9 text-[#0B3B36]" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 w-full text-left">Product</span>
             </div>
+
+            {/* 6. Data */}
             <Link
               href="/solutions/data-driven-insights"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
+              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
             >
-              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Data
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Database className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
+                <span>Data</span>
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
+
+            {/* 7. Marketing */}
             <Link
               href="/solutions/marketing"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
+              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
             >
-              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Marketing
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Megaphone className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
+                <span>Marketing</span>
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
+
+            {/* 8. Operations */}
             <Link
               href="/solutions/retail-operations"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex items-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group"
+              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
             >
-              <span className="flex min-w-0 flex-wrap items-end gap-1.5 break-words">
-                Operations
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Settings className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
+                <span>Operations</span>
                 <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
             </Link>
+
+            {/* 9. Cybersecurity */}
             <Link
               href="/solutions/cybersecurity"
-              className="aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-4 flex items-end font-[family-name:var(--head)] font-medium text-[1rem] leading-[1.2] hover:bg-[#022B2A] transition-colors no-underline group"
+              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
             >
-              <span className="flex items-end gap-1.5">
-                Cybersecurity
-                <svg className="w-3.5 h-3.5 mb-0.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <ShieldCheck className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
+              </div>
+              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
+                <span>Cybersecurity</span>
+                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 12 12 4M6 4h6v6" />
                 </svg>
               </span>
@@ -255,7 +310,7 @@ export default function Home() {
             <li className="pl-6 border-l-[3px] border-[var(--teal-muted)]">
               <h3 className="text-[1.3rem] font-medium leading-[1.35]">
                 <Link
-                  href="/engagement#projects"
+                  href="/engagement#project-based"
                   className="inline-flex items-center gap-2 text-[var(--teal)] no-underline hover:underline underline-offset-[5px] group"
                 >
                   Projects

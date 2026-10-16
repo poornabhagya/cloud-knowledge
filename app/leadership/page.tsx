@@ -53,115 +53,229 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* Leadership Profiles Section */}
       <section className="pb-24">
-        <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
-          {/* Sticky Photo Container (4:5 Aspect Ratio) */}
-          <div
-            className="aspect-[4/5] rounded-[16px] bg-[#E4E0D8] grid place-items-center text-[var(--grey-text)] text-[0.9rem] text-center p-4 lg:sticky lg:top-8 max-w-[22rem] w-full"
-            aria-label="Founder photograph placeholder"
-          >
-            Founder photograph
-            <br />
-            Portrait, 4:5, minimum 1200px wide
-          </div>
-
-          {/* Bio & Details */}
-          <div>
-            <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] text-[var(--teal)] font-[family-name:var(--head)] font-semibold leading-[1.22]">
-              Founder & Chief Executive
-            </h2>
-            <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--grey-text)] text-[1.05rem]">
-              Ceylon Knowledge Services
-            </p>
-
-            <div className="mt-8 space-y-5 text-[1.1rem] leading-[1.6] text-[var(--ink)] max-w-[36rem]">
-              <p>
-                Prior to founding CKS, our leadership led complex corporate finance engagements, operational restructuring programs, and data strategy advisory for mid-market and enterprise clients across Western and regional markets.
-              </p>
-              <br/>
-              <p>
-                Recognising the persistent bottleneck in securing agile, high-calibre specialist talent without long-term overhead, CKS was formed to connect Sri Lanka’s deeply accredited professional talent pool directly into global enterprise workflows.
-              </p>
+        <div className="wrap">
+          {/* Founder & Chief Executive */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+            {/* Sticky Photo Container (4:5 Aspect Ratio) */}
+            <div
+              className="aspect-[4/5] rounded-[16px] bg-[#E4E0D8] grid place-items-center text-[var(--grey-text)] text-[0.9rem] text-center p-4 lg:sticky lg:top-8 max-w-[22rem] w-full"
+              aria-label="Founder photograph placeholder"
+            >
+              Founder photograph
+              <br />
+              Portrait, 4:5, minimum 1200px wide
             </div>
 
-            {/* Credentials Grid */}
-            <ul className="mt-10 pt-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 max-w-[36rem] p-0 m-0">
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                  Education & Qualifications
-                </h3>
-                <br/>
-                <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                  Fellow Chartered Management Accountants (FCMA / CGMA), MBA Finance
-                </p>
-              </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                  Previous Roles
-                </h3>
-                <br/>
-                <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                  Corporate Advisory Lead, Senior Valuation Specialist, Financial Director
-                </p>
-              </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                  Key Sectors
-                </h3>
-                <br/>
-                <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                  Corporate Finance, Retail Analytics, Cybersecurity, Education Strategy
-                </p>
-              </li>
-              <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                  Based In
-                </h3>
-                <br/>
-                <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                  Colombo, Sri Lanka
-                </p>
-              </li>
-            </ul>
+            {/* Bio & Details */}
+            <div>
+              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] text-[var(--teal)] font-[family-name:var(--head)] font-semibold leading-[1.22]">
+                Founder & Chief Executive
+              </h2>
+              <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--grey-text)] text-[1.05rem]">
+                Ceylon Knowledge Services
+              </p>
 
-            {/* Founder Quote */}
-            <blockquote className="mt-10 p-6 md:p-7 border border-[rgba(45,45,39,0.1)] bg-white rounded-[12px] font-[family-name:var(--head)] font-medium text-[1.2rem] leading-[1.45] text-[var(--teal)] max-w-[36rem]">
-              "Our standard is simple: every model, report, and dashboard we touch must be defensible enough to present in front of your board or investors tomorrow."
-            </blockquote>
+              <div className="mt-8 space-y-5 text-[1.1rem] leading-[1.6] text-[var(--ink)] max-w-[36rem]">
+                <p>
+                  Prior to founding CKS, our leadership led complex corporate finance engagements, operational restructuring programs, and data strategy advisory for mid-market and enterprise clients across Western and regional markets.
+                </p>
+                <br/>
+                <p>
+                  Recognising the persistent bottleneck in securing agile, high-calibre specialist talent without long-term overhead, CKS was formed to connect Sri Lanka’s deeply accredited professional talent pool directly into global enterprise workflows.
+                </p>
+              </div>
 
-            {/* Links */}
-            <div className="mt-10 flex gap-6 flex-wrap">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
-              >
-                LinkedIn
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
+              {/* Credentials Grid */}
+              <ul className="mt-10 pt-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 max-w-[36rem] p-0 m-0">
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Education & Qualifications
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Fellow Chartered Management Accountants (FCMA / CGMA), MBA Finance
+                  </p>
+                </li>
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Previous Roles
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Corporate Advisory Lead, Senior Valuation Specialist, Financial Director
+                  </p>
+                </li>
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Key Sectors
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Corporate Finance, Retail Analytics, Cybersecurity, Education Strategy
+                  </p>
+                </li>
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Based In
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Colombo, Sri Lanka
+                  </p>
+                </li>
+              </ul>
+
+              {/* Founder Quote */}
+              <blockquote className="mt-10 p-6 md:p-7 border border-[rgba(45,45,39,0.1)] bg-white rounded-[12px] font-[family-name:var(--head)] font-medium text-[1.2rem] leading-[1.45] text-[var(--teal)] max-w-[36rem]">
+                "Our standard is simple: every model, report, and dashboard we touch must be defensible enough to present in front of your board or investors tomorrow."
+              </blockquote>
+
+              {/* Links */}
+              <div className="mt-10 flex gap-6 flex-wrap">
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
                 >
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
-              >
-                Get in touch
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
+                  LinkedIn
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M4 12 12 4M6 4h6v6" />
+                  </svg>
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
                 >
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </Link>
+                  Get in touch
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M4 12 12 4M6 4h6v6" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Chief Operating Officer */}
+          <div className="mt-20 pt-16 border-t border-[rgba(45,45,39,0.14)] grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+            {/* Sticky Photo Container (4:5 Aspect Ratio) */}
+            <div
+              className="bg-[#E5E2DC] rounded-2xl aspect-[4/5] flex flex-col items-center justify-center p-6 text-center text-sm text-[#0B3B36]/70 lg:sticky lg:top-8 max-w-[22rem] w-full"
+              aria-label="Chief Operating Officer photograph placeholder"
+            >
+              <span className="font-medium text-[0.95rem] text-[#0B3B36]">Chief Operating Officer photograph</span>
+              <span className="mt-1 text-xs opacity-75">Portrait, 4:5, minimum 1200px wide</span>
+            </div>
+
+            {/* Bio & Details */}
+            <div>
+              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] text-[var(--teal)] font-[family-name:var(--head)] font-semibold leading-[1.22]">
+                Chief Operating Officer
+              </h2>
+              <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--grey-text)] text-[1.05rem]">
+                Ceylon Knowledge Services
+              </p>
+
+              <div className="mt-8 space-y-5 text-[1.1rem] leading-[1.6] text-[var(--ink)] max-w-[36rem]">
+                <p>
+                  Overseeing global operations, delivery governance, and operational resilience across all CKS practices. With deep experience in scaling cross-functional teams and standardising analytical workflows, our operational leadership ensures every client engagement executes with predictable velocity and uncompromising quality.
+                </p>
+                <br/>
+                <p>
+                  Focused on bridging high-level strategic objectives with day-to-day execution excellence, CKS operates as a dependable extension of enterprise client teams—integrating seamlessly into corporate communication cadences, security requirements, and institutional reporting frameworks.
+                </p>
+              </div>
+
+              {/* Credentials Grid */}
+              <ul className="mt-10 pt-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 max-w-[36rem] p-0 m-0">
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Education & Qualifications
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Master of Business Administration (MBA), Lean Six Sigma Black Belt, PMP Certified
+                  </p>
+                </li>
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Previous Roles
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Senior Operations Director, Head of Delivery, Global Program Manager
+                  </p>
+                </li>
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Key Sectors
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Global Operations, Service Delivery, Scaling Agile Teams, Enterprise Workflows
+                  </p>
+                </li>
+                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
+                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
+                    Based In
+                  </h3>
+                  <br/>
+                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                    Colombo, Sri Lanka
+                  </p>
+                </li>
+              </ul>
+
+              {/* COO Quote */}
+              <blockquote className="mt-10 p-6 md:p-7 border border-[rgba(45,45,39,0.1)] bg-white rounded-[12px] font-[family-name:var(--head)] font-medium text-[1.2rem] leading-[1.45] text-[var(--teal)] max-w-[36rem]">
+                "Our operational framework is engineered for precision and predictability—ensuring seamless integration and rigorous delivery standards across every client workflow."
+              </blockquote>
+
+              {/* Links */}
+              <div className="mt-10 flex gap-6 flex-wrap">
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
+                >
+                  LinkedIn
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M4 12 12 4M6 4h6v6" />
+                  </svg>
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
+                >
+                  Get in touch
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M4 12 12 4M6 4h6v6" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

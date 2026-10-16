@@ -38,7 +38,7 @@ export default function Navbar() {
     }`;
 
   return (
-    <header className="bg-[var(--teal)] text-[var(--cream)] relative z-50">
+    <header className="bg-[var(--teal)] text-[var(--cream)] sticky top-0 z-50 w-full shadow-sm border-b border-[#043D3B]/20">
       <div className="wrap flex items-center justify-between h-[76px] gap-4">
         {/* Wordmark */}
         <Link href="/" onClick={closeAll} className="flex items-center gap-3 no-underline">
@@ -110,7 +110,7 @@ export default function Navbar() {
                 </button>
               </div>
               <ul
-                className={`mt-2 md:mt-0 md:absolute top-full left-[-1.25rem] min-w-[17rem] bg-[var(--cream)] text-[var(--ink)] rounded-lg py-2 shadow-[0_12px_32px_rgba(45,45,39,0.18)] z-20 ${
+                className={`mt-2 md:mt-0 md:absolute top-full left-[-1.25rem] min-w-[17rem] bg-[var(--cream)] text-[var(--ink)] rounded-lg py-2 shadow-[0_12px_32px_rgba(45,45,39,0.18)] z-50 ${
                   openSubMenu === "solutions" ? "block" : "hidden md:group-hover:block"
                 }`}
               >
@@ -157,7 +157,7 @@ export default function Navbar() {
                 </button>
               </div>
               <ul
-                className={`mt-2 md:mt-0 md:absolute top-full left-[-1.25rem] min-w-[15rem] bg-[var(--cream)] text-[var(--ink)] rounded-lg py-2 shadow-[0_12px_32px_rgba(45,45,39,0.18)] z-20 ${
+                className={`mt-2 md:mt-0 md:absolute top-full left-[-1.25rem] min-w-[15rem] bg-[var(--cream)] text-[var(--ink)] rounded-lg py-2 shadow-[0_12px_32px_rgba(45,45,39,0.18)] z-50 ${
                   openSubMenu === "about" ? "block" : "hidden md:group-hover:block"
                 }`}
               >
@@ -201,7 +201,7 @@ export default function Navbar() {
                 </button>
               </div>
               <ul
-                className={`mt-2 md:mt-0 md:absolute top-full left-[-1.25rem] min-w-[14rem] bg-[var(--cream)] text-[var(--ink)] rounded-lg py-2 shadow-[0_12px_32px_rgba(45,45,39,0.18)] z-20 ${
+                className={`mt-2 md:mt-0 md:absolute top-full left-[-1.25rem] min-w-[14rem] bg-[var(--cream)] text-[var(--ink)] rounded-lg py-2 shadow-[0_12px_32px_rgba(45,45,39,0.18)] z-50 ${
                   openSubMenu === "work" ? "block" : "hidden md:group-hover:block"
                 }`}
               >

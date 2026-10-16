@@ -45,7 +45,8 @@ export default function EngagementPage() {
         <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
           <div>
             <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2]">
-              How to partner with us
+              How to partner <br className="hidden md:inline" />
+              with&nbsp;us
             </h1>
             <br />
             <h2 className="text-[1.5rem] text-[var(--ink)] font-medium mt-2">
@@ -59,7 +60,8 @@ export default function EngagementPage() {
       </section>
 
       {/* Model 01: Project-Based */}
-      <section className="py-24 border-t border-[rgba(45,45,39,0.08)] scroll-mt-4" id="projects">
+      <section className="py-24 border-t border-[rgba(45,45,39,0.08)] scroll-mt-24" id="project-based">
+        <span id="projects" className="scroll-mt-24" aria-hidden="true" />
         <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div>
             <span className="font-[family-name:var(--head)] font-medium text-[0.9rem] text-[var(--teal-muted)]">
@@ -114,7 +116,7 @@ export default function EngagementPage() {
       </section>
 
       {/* Model 02: Retainer */}
-      <section className="py-24 bg-[rgba(4,61,59,0.02)] border-t border-[rgba(45,45,39,0.08)] scroll-mt-4" id="retainer">
+      <section className="py-24 bg-[rgba(4,61,59,0.02)] border-t border-[rgba(45,45,39,0.08)] scroll-mt-24" id="retainer">
         <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div>
             <span className="font-[family-name:var(--head)] font-medium text-[0.9rem] text-[var(--teal-muted)]">
@@ -169,7 +171,7 @@ export default function EngagementPage() {
       </section>
 
       {/* Model 03: Dedicated Team */}
-      <section className="py-24 border-t border-[rgba(45,45,39,0.08)] scroll-mt-4" id="dedicated-team">
+      <section className="py-24 border-t border-[rgba(45,45,39,0.08)] scroll-mt-24" id="dedicated-team">
         <div className="wrap grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-start">
           <div>
             <span className="font-[family-name:var(--head)] font-medium text-[0.9rem] text-[var(--teal-muted)]">

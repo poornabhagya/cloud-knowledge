@@ -122,12 +122,11 @@ export default async function SubServicePage({
             <br />
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0">
               {subService.whatWeDo.map((item: any, idx: number) => (
-                <li key={idx} className="bg-white border border-[#E5E7EB] rounded-[12px] p-8 shadow-sm">
+                <li key={idx} className="bg-white border border-[#E5E7EB] rounded-[12px] p-8 shadow-sm flex flex-col h-full">
                   <span className="w-10 h-10 rounded-[8px] bg-[rgba(4,61,59,0.08)] grid place-items-center mb-5">
                     <svg className="w-5 h-5 stroke-[var(--teal)] fill-none stroke-[1.8]" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
                   </span>
-                  <h3 className="text-[1.15rem] font-medium text-[var(--teal)] mb-3">{item.title}</h3>
-                  <br />
+                  <h3 className="text-[1.15rem] font-medium text-[var(--teal)] mb-3 min-h-[3rem] md:min-h-[3.25rem] flex items-start">{item.title}</h3>
                   <p className="text-[1rem] text-[var(--grey-text)] leading-[1.65]">{item.desc}</p>
                 </li>
               ))}
@@ -177,10 +176,10 @@ export default async function SubServicePage({
                   <ul className="space-y-5 list-none p-0 m-0 flex-1 flex flex-col justify-between">
                     {col.items.map((item: any, itemIdx: number) => (
                       <li key={itemIdx} className="bg-white rounded-[12px] p-6 border border-[#E5E7EB]/80 shadow-xs">
-                        <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-2.5">
+                        <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-3">
                           {item.title}
                         </h4>
-                        <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
+                        <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65] mt-2">
                           {item.desc}
                         </p>
                       </li>
@@ -227,13 +226,11 @@ export default async function SubServicePage({
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {subService.howItWorks.map((item: any, idx: number) => (
-                <div key={idx} className="bg-white border border-[#E5E7EB] rounded-[12px] p-6 relative shadow-sm">
+                <div key={idx} className="bg-white border border-[#E5E7EB] rounded-[12px] p-6 relative shadow-sm flex flex-col h-full">
                   <span className="text-[0.85rem] font-bold text-[#5CB39F] mb-2 block uppercase tracking-wider">
                     {item.step} - {item.title.split(' ')[0]}
                   </span>
-                  <br />
-                  <h3 className="text-[1.1rem] font-medium text-[var(--teal)] mb-2">{item.title}</h3>
-                  <br />
+                  <h3 className="text-[1.1rem] font-medium text-[var(--teal)] mb-2 min-h-[3rem] md:min-h-[3.25rem] flex items-start">{item.title}</h3>
                   <p className="text-[0.95rem] text-[var(--ink)] leading-[1.6]">{item.desc}</p>
                 </div>
               ))}

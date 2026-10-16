@@ -10,53 +10,53 @@ export const metadata: Metadata = {
 const whatCksDoes = [
   {
     title: "Size your total addressable market",
-    desc: "estimate the full revenue opportunity, then narrow it to the share that can realistically be served and captured",
+    desc: "Estimate the full revenue opportunity, then narrow it to the share that can realistically be served and captured",
   },
   {
     title: "Commercial due diligence",
-    desc: "assess a target’s market, customers, competitive position and growth assumptions before an investment or acquisition",
+    desc: "Assess a target’s market, customers, competitive position and growth assumptions before an investment or acquisition",
   },
   {
     title: "Go to market strategy",
-    desc: "define target segments, positioning, pricing, channels and the sequence for entering a market or launching an offer",
+    desc: "Define target segments, positioning, pricing, channels and the sequence for entering a market or launching an offer",
   },
   {
     title: "Competitor analysis",
-    desc: "map who you compete with, how they position, price and perform, and where the gaps are",
+    desc: "Map who you compete with, how they position, price and perform, and where the gaps are",
   },
   {
     title: "Feasibility studies",
-    desc: "test whether a project, venture or expansion stands up commercially, operationally and financially before resources are committed",
+    desc: "Test whether a project, venture or expansion stands up commercially, operationally and financially before resources are committed",
   },
 ];
 
 const benefitsFirms = [
   {
     title: "Scale delivery without hiring",
-    desc: "take on more engagements, or larger ones, without adding permanent headcount",
+    desc: "Take on more engagements, or larger ones, without adding permanent headcount.",
   },
   {
     title: "Your brand, your client relationship",
-    desc: "work is delivered in your format where required and under your name, and we stay behind the scenes",
+    desc: "Work is delivered in your format where required and under your name, and we stay behind the scenes.",
   },
   {
     title: "Capacity that fits the engagement",
-    desc: "a team assembled around what the project needs, from a single workstream to the full analysis",
+    desc: "A team assembled around what the project needs, from a single workstream to the full analysis.",
   },
 ];
 
 const benefitsOrganisations = [
   {
     title: "Know the size of the prize",
-    desc: "understand the real opportunity and your realistic share of it before you invest",
+    desc: "Understand the real opportunity and your realistic share of it before you invest.",
   },
   {
     title: "Test the deal before you sign",
-    desc: "validate the growth story and assumptions behind a valuation, not just the headline numbers",
+    desc: "Validate the growth story and assumptions behind a valuation, not just the headline numbers.",
   },
   {
     title: "Strategy capability without the overhead",
-    desc: "senior analytical support for a specific decision, without building a strategy team in house",
+    desc: "Senior analytical support for a specific decision, without building a strategy team in house.",
   },
 ];
 
@@ -65,25 +65,25 @@ const howItWorks = [
     step: "01",
     shortTitle: "Scope",
     title: "Scope the engagement",
-    desc: "we agree the questions to be answered, the services required and, for firms, which workstreams we take on",
+    desc: "We agree the questions to be answered, the services required and, for firms, which workstreams we take on",
   },
   {
     step: "02",
     shortTitle: "Research",
     title: "Research and analyse",
-    desc: "we gather market, customer, competitor and financial data and test it against the decision",
+    desc: "We gather market, customer, competitor and financial data and test it against the decision",
   },
   {
     step: "03",
     shortTitle: "Build",
     title: "Build the recommendation",
-    desc: "we turn the findings into a clear answer, with the evidence and numbers behind it",
+    desc: "We turn the findings into a clear answer, with the evidence and numbers behind it",
   },
   {
     step: "04",
     shortTitle: "Deliver",
     title: "Deliver",
-    desc: "for firms, we hand over finished work in your format, ready for your client; for organisations, we present the findings directly to your team or board",
+    desc: "For firms, we hand over finished work in your format, ready for your client; for organisations, we present the findings directly to your team or board",
   },
 ];
 
@@ -222,7 +222,7 @@ export default function StrategyConsultingPage() {
             {whatCksDoes.map((item, idx) => (
               <li
                 key={idx}
-                className="bg-white border border-[#E5E7EB] rounded-[12px] p-8 shadow-sm flex flex-col justify-start transition-transform duration-150 hover:-translate-y-0.5"
+                className="bg-white border border-[#E5E7EB] rounded-[12px] p-8 shadow-sm flex flex-col h-full transition-transform duration-150 hover:-translate-y-0.5"
               >
                 <span
                   className="w-10 h-10 rounded-[8px] bg-[rgba(4,61,59,0.08)] grid place-items-center mb-5"
@@ -235,10 +235,9 @@ export default function StrategyConsultingPage() {
                     <path d="M5 12l5 5L20 7" />
                   </svg>
                 </span>
-                <h3 className="text-[1.15rem] font-medium text-[var(--teal)] mb-3">
+                <h3 className="text-[1.15rem] font-medium text-[var(--teal)] mb-3 min-h-[3rem] md:min-h-[3.25rem] flex items-start">
                   {item.title}
                 </h3>
-                <br />
                 <p className="text-[1rem] text-[var(--grey-text)] leading-[1.65]">
                   {item.desc}
                 </p>
@@ -283,10 +282,10 @@ export default function StrategyConsultingPage() {
                     key={idx}
                     className="bg-white rounded-[12px] p-6 border border-[#E5E7EB]/80 shadow-xs"
                   >
-                    <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-2.5">
+                    <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-3">
                       {item.title}
                     </h4>
-                    <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
+                    <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65] mt-2">
                       {item.desc}
                     </p>
                   </li>
@@ -318,10 +317,10 @@ export default function StrategyConsultingPage() {
                     key={idx}
                     className="bg-white rounded-[12px] p-6 border border-[#E5E7EB]/80 shadow-xs"
                   >
-                    <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-2.5">
+                    <h4 className="text-[1.12rem] font-medium text-[var(--teal)] mb-3">
                       {item.title}
                     </h4>
-                    <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65]">
+                    <p className="text-[0.98rem] text-[var(--grey-text)] leading-[1.65] mt-2">
                       {item.desc}
                     </p>
                   </li>
@@ -345,16 +344,14 @@ export default function StrategyConsultingPage() {
             {howItWorks.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-[#E5E7EB] rounded-[12px] p-6 relative shadow-sm"
+                className="bg-white border border-[#E5E7EB] rounded-[12px] p-6 relative shadow-sm flex flex-col h-full"
               >
                 <span className="text-[0.85rem] font-bold text-[#5CB39F] mb-2 block uppercase tracking-wider">
                   {item.step} - {item.shortTitle}
                 </span>
-                <br />
-                <h3 className="text-[1.1rem] font-medium text-[var(--teal)] mb-2">
+                <h3 className="text-[1.1rem] font-medium text-[var(--teal)] mb-2 min-h-[3rem] md:min-h-[3.25rem] flex items-start">
                   {item.title}
                 </h3>
-                <br />
                 <p className="text-[0.95rem] text-[var(--ink)] leading-[1.6]">
                   {item.desc}
                 </p>
