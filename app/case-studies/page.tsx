@@ -28,7 +28,7 @@ export default function CaseStudiesPage() {
         );
 
   return (
-    <main>
+    <main suppressHydrationWarning>
       {/* Breadcrumb Navigation */}
       <nav
         className="border-b border-[rgba(45,45,39,0.14)] text-[0.9rem] text-[var(--grey-text)]"
@@ -99,20 +99,48 @@ export default function CaseStudiesPage() {
                   key={item.slug}
                   className="bg-white border border-[rgba(45,45,39,0.1)] rounded-[16px] overflow-hidden flex flex-col transition-[border-color,transform] duration-150 hover:border-[var(--teal-muted)] hover:-translate-y-0.5"
                 >
-                  <div className="aspect-[16/7] bg-[#E4E0D8] grid place-items-center text-[0.85rem] text-[var(--grey-text)]">
-                    Cover image or graphic, 16:7
-                  </div>
+                  {item.coverImage ? (
+                    <div className="w-full aspect-[16/7] overflow-hidden rounded-t-2xl bg-neutral-100 border-b border-neutral-200">
+                      <img
+                        src={item.coverImage}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                        loading="eager"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full aspect-[16/7] bg-[#E5E2DC] rounded-t-2xl flex items-center justify-center text-sm text-[#0B3B36]/60">
+                      Cover image or graphic, 16:7
+                    </div>
+                  )}
                   <div className="p-8 md:p-9 flex flex-col flex-1">
                     <div className="flex flex-wrap gap-2">
-                      <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--cream)] bg-[var(--teal)] py-1 px-3 rounded-full">
-                        {item.serviceLine}
-                      </span>
-                      <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--teal)] bg-[rgba(4,61,59,0.08)] py-1 px-3 rounded-full">
-                        {item.engagementModel}
-                      </span>
-                      <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--teal)] bg-[rgba(4,61,59,0.08)] py-1 px-3 rounded-full">
-                        {item.country}
-                      </span>
+                      {item.tags && item.tags.length > 0 ? (
+                        item.tags.map((tag, idx) => (
+                          <span
+                            key={tag}
+                            className={`font-[family-name:var(--head)] font-medium text-[0.8rem] py-1 px-3 rounded-full ${
+                              idx === 0
+                                ? "text-[var(--cream)] bg-[var(--teal)]"
+                                : "text-[var(--teal)] bg-[rgba(4,61,59,0.08)]"
+                            }`}
+                          >
+                            {tag}
+                          </span>
+                        ))
+                      ) : (
+                        <>
+                          <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--cream)] bg-[var(--teal)] py-1 px-3 rounded-full">
+                            {item.serviceLine}
+                          </span>
+                          <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--teal)] bg-[rgba(4,61,59,0.08)] py-1 px-3 rounded-full">
+                            {item.engagementModel}
+                          </span>
+                          <span className="font-[family-name:var(--head)] font-medium text-[0.8rem] text-[var(--teal)] bg-[rgba(4,61,59,0.08)] py-1 px-3 rounded-full">
+                            {item.country}
+                          </span>
+                        </>
+                      )}
                     </div>
 
                     {/* Title එකට උඩින් <br /> */}

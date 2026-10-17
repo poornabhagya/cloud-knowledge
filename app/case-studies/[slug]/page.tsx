@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudiesData } from "@/data/caseStudies";
+import DentalClinicCaseStudyPage from "@/app/our-work/ai-search-visibility-dental-clinic/page";
+import B2BSupplierCaseStudyPage from "@/app/our-work/b2b-supplier-seo-audit/page";
+import DentalClinicGrowthCaseStudyPage from "@/app/our-work/dental-clinic-google-visibility-growth/page";
+import PersonalBrandingCaseStudyPage from "@/app/our-work/personal-branding-global-talent-founder/page";
+import HigherEducationValuationCaseStudyPage from "@/app/our-work/preparing-for-ipo-higher-education-valuation/page";
+import CybersecurityPortalCaseStudyPage from "@/app/our-work/cybersecurity-client-portal-protection/page";
+import PEFinancialModellingCaseStudyPage from "@/app/our-work/financial-modelling-private-equity-education-africa/page";
+import ScalingB2BTechBrandCaseStudyPage from "@/app/our-work/scaling-b2b-tech-brand-content/page";
 
 export async function generateStaticParams() {
   return Object.keys(caseStudiesData).map((slug) => ({ slug }));
@@ -12,6 +20,30 @@ export default async function SingleCaseStudyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === "ai-search-visibility-dental-clinic") {
+    return <DentalClinicCaseStudyPage />;
+  }
+  if (slug === "b2b-supplier-seo-audit") {
+    return <B2BSupplierCaseStudyPage />;
+  }
+  if (slug === "dental-clinic-google-visibility-growth") {
+    return <DentalClinicGrowthCaseStudyPage />;
+  }
+  if (slug === "personal-branding-global-talent-founder") {
+    return <PersonalBrandingCaseStudyPage />;
+  }
+  if (slug === "preparing-for-ipo-higher-education-valuation") {
+    return <HigherEducationValuationCaseStudyPage />;
+  }
+  if (slug === "cybersecurity-client-portal-protection") {
+    return <CybersecurityPortalCaseStudyPage />;
+  }
+  if (slug === "financial-modelling-private-equity-education-africa") {
+    return <PEFinancialModellingCaseStudyPage />;
+  }
+  if (slug === "scaling-b2b-tech-brand-content") {
+    return <ScalingB2BTechBrandCaseStudyPage />;
+  }
   const cs = caseStudiesData[slug];
 
   if (!cs) {

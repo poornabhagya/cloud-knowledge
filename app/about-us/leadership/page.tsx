@@ -41,15 +41,16 @@ export default function LeadershipPage() {
       </nav>
 
       {/* Page Hero */}
-      <section className="py-16 md:py-20">
-        <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
-          <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2]">
-            Leadership
-          </h1>
-          <br/>
-          <p className="text-[1.2rem] leading-[1.65] max-w-[32rem] text-[var(--ink)]">
-            Led by experienced practitioners committed to building a reliable specialist execution backbone for global enterprises.
-          </p>
+      <section className="pt-16 md:pt-20">
+        <div className="wrap">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start mb-16 md:mb-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0B3B36]">
+              Leadership
+            </h1>
+            <p className="text-base md:text-lg text-neutral-700 leading-relaxed">
+              Led by experienced practitioners committed to building a reliable specialist execution backbone for global enterprises.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -61,9 +62,9 @@ export default function LeadershipPage() {
             {/* Sticky Photo Container (4:5 Aspect Ratio) */}
             <div
               className="aspect-[4/5] rounded-[16px] bg-[#E4E0D8] grid place-items-center text-[var(--grey-text)] text-[0.9rem] text-center p-4 lg:sticky lg:top-8 max-w-[22rem] w-full"
-              aria-label="Founder photograph placeholder"
+              aria-label="Krishanth Jayarajah photograph placeholder"
             >
-              Founder photograph
+              Krishanth Jayarajah photograph
               <br />
               Portrait, 4:5, minimum 1200px wide
             </div>
@@ -71,19 +72,24 @@ export default function LeadershipPage() {
             {/* Bio & Details */}
             <div>
               <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] text-[var(--teal)] font-[family-name:var(--head)] font-semibold leading-[1.22]">
-                Founder & Chief Executive
+                Krishanth Jayarajah
               </h2>
-              <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--grey-text)] text-[1.05rem]">
+              <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--teal)] text-[1.15rem]">
+                Founder & Chief Executive
+              </p>
+              <p className="mt-0.5 font-[family-name:var(--head)] font-normal text-[var(--grey-text)] text-[1.05rem]">
                 Ceylon Knowledge Services
               </p>
 
               <div className="mt-8 space-y-5 text-[1.1rem] leading-[1.6] text-[var(--ink)] max-w-[36rem]">
                 <p>
-                  Prior to founding CKS, our leadership led complex corporate finance engagements, operational restructuring programs, and data strategy advisory for mid-market and enterprise clients across Western and regional markets.
+                  Krishanth Jayarajah is the Founder and CEO of Ceylon Knowledge Services, with 15 years of experience across consulting, market intelligence, corporate finance and equity research. He began his career at Morgan Stanley and Acuity Analytics (formerly Copal Amba). Before founding CKS, he led corporate finance engagements, operational restructuring programmes and data strategy advisory for mid-market and enterprise clients in Western and regional markets.
                 </p>
-                <br/>
                 <p>
-                  Recognising the persistent bottleneck in securing agile, high-calibre specialist talent without long-term overhead, CKS was formed to connect Sri Lanka’s deeply accredited professional talent pool directly into global enterprise workflows.
+                  He founded CKS after recognising the persistent bottlenecks companies faced to secure agile, high calibre specialist talent without taking on long term overhead. CKS connects Sri Lanka’s highly qualified professional talent pool directly into global enterprise workflows. He has grown the firm to 60 people across six verticals and previously built a 30 analyst captive research operation delivering over $1m in work.
+                </p>
+                <p>
+                  He advises startups, family businesses, corporates and development institutions across the UK, Australia, the US and Sri Lanka on go-to-market strategy, valuations and financial advisory. His specialisms include mergers, spinoffs, reverse mergers and divestments.
                 </p>
               </div>
 
@@ -91,51 +97,29 @@ export default function LeadershipPage() {
               <ul className="mt-10 pt-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 max-w-[36rem] p-0 m-0">
                 <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
                   <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                    Education & Qualifications
+                    Education
                   </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                    Fellow Chartered Management Accountants (FCMA / CGMA), MBA Finance
-                  </p>
-                </li>
-                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                    Previous Roles
-                  </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                    Corporate Advisory Lead, Senior Valuation Specialist, Financial Director
-                  </p>
-                </li>
-                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                    Key Sectors
-                  </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                    Corporate Finance, Retail Analytics, Cybersecurity, Education Strategy
-                  </p>
+                  <ul className="mt-2 list-disc list-inside space-y-1.5 text-sm text-neutral-700">
+                    <li>MSc Strategy and International Business – Aston Business School</li>
+                    <li>BA (Hons) International Business Management – University of Nottingham</li>
+                  </ul>
                 </li>
                 <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
                   <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
                     Based In
                   </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                  <p className="mt-2 text-sm text-neutral-700">
                     Colombo, Sri Lanka
                   </p>
                 </li>
               </ul>
 
-              {/* Founder Quote */}
-              <blockquote className="mt-10 p-6 md:p-7 border border-[rgba(45,45,39,0.1)] bg-white rounded-[12px] font-[family-name:var(--head)] font-medium text-[1.2rem] leading-[1.45] text-[var(--teal)] max-w-[36rem]">
-                "Our standard is simple: every model, report, and dashboard we touch must be defensible enough to present in front of your board or investors tomorrow."
-              </blockquote>
-
               {/* Links */}
-              <div className="mt-10 flex gap-6 flex-wrap">
+              <div className="mt-6 flex gap-6 flex-wrap">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/krishanthj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
                 >
                   LinkedIn
@@ -169,32 +153,32 @@ export default function LeadershipPage() {
           </div>
 
           {/* Chief Operating Officer */}
-          <div className="mt-20 pt-16 border-t border-[rgba(45,45,39,0.14)] grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
+          <div className="mt-24 pt-16 border-t border-[rgba(45,45,39,0.14)] grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
             {/* Sticky Photo Container (4:5 Aspect Ratio) */}
             <div
-              className="bg-[#E5E2DC] rounded-2xl aspect-[4/5] flex flex-col items-center justify-center p-6 text-center text-sm text-[#0B3B36]/70 lg:sticky lg:top-8 max-w-[22rem] w-full"
-              aria-label="Chief Operating Officer photograph placeholder"
+              className="aspect-[4/5] rounded-[16px] bg-[#E4E0D8] grid place-items-center text-[var(--grey-text)] text-[0.9rem] text-center p-4 lg:sticky lg:top-8 max-w-[22rem] w-full"
+              aria-label="Kanishka Perera photograph placeholder"
             >
-              <span className="font-medium text-[0.95rem] text-[#0B3B36]">Chief Operating Officer photograph</span>
-              <span className="mt-1 text-xs opacity-75">Portrait, 4:5, minimum 1200px wide</span>
+              Kanishka Perera photograph
+              <br />
+              Portrait, 4:5, minimum 1200px wide
             </div>
 
             {/* Bio & Details */}
             <div>
               <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] text-[var(--teal)] font-[family-name:var(--head)] font-semibold leading-[1.22]">
-                Chief Operating Officer
+                Kanishka Perera
               </h2>
-              <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--grey-text)] text-[1.05rem]">
+              <p className="mt-1 font-[family-name:var(--head)] font-medium text-[var(--teal)] text-[1.15rem]">
+                Chief Operating Officer
+              </p>
+              <p className="mt-0.5 font-[family-name:var(--head)] font-normal text-[var(--grey-text)] text-[1.05rem]">
                 Ceylon Knowledge Services
               </p>
 
               <div className="mt-8 space-y-5 text-[1.1rem] leading-[1.6] text-[var(--ink)] max-w-[36rem]">
                 <p>
-                  Overseeing global operations, delivery governance, and operational resilience across all CKS practices. With deep experience in scaling cross-functional teams and standardising analytical workflows, our operational leadership ensures every client engagement executes with predictable velocity and uncompromising quality.
-                </p>
-                <br/>
-                <p>
-                  Focused on bridging high-level strategic objectives with day-to-day execution excellence, CKS operates as a dependable extension of enterprise client teams—integrating seamlessly into corporate communication cadences, security requirements, and institutional reporting frameworks.
+                  Kanishka Perera is a senior business leader with 18 years of experience across investment management, private equity, corporate finance, wealth management, equity research and business operations. His career spans Oceans Talent, Asia Securities Wealth Management, NDB Zephyr Partners Lanka, Asia Securities and Acuity Analytics. He has built new business verticals, scaled teams and revenue generating operations, and set up finance and operational functions. He advises startups, private equity backed businesses, corporates and institutions, including US based companies, on growth, governance, fundraising, go to market strategy and performance. He has managed investment portfolios across fixed income and equities, and has supported major corporate transactions and acquisitions.
                 </p>
               </div>
 
@@ -202,51 +186,29 @@ export default function LeadershipPage() {
               <ul className="mt-10 pt-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 max-w-[36rem] p-0 m-0">
                 <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
                   <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                    Education & Qualifications
+                    Education
                   </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                    Master of Business Administration (MBA), Lean Six Sigma Black Belt, PMP Certified
-                  </p>
-                </li>
-                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                    Previous Roles
-                  </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                    Senior Operations Director, Head of Delivery, Global Program Manager
-                  </p>
-                </li>
-                <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
-                  <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
-                    Key Sectors
-                  </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
-                    Global Operations, Service Delivery, Scaling Agile Teams, Enterprise Workflows
-                  </p>
+                  <ul className="mt-2 list-disc list-inside space-y-1.5 text-sm text-neutral-700">
+                    <li>Bachelor of Commerce, University of Melbourne</li>
+                    <li>Professional Graduate Diploma, British Computer Society</li>
+                  </ul>
                 </li>
                 <li className="border-t border-[rgba(45,45,39,0.14)] pt-3.5">
                   <h3 className="text-[0.9rem] font-medium text-[var(--teal-muted)] font-[family-name:var(--head)]">
                     Based In
                   </h3>
-                  <br/>
-                  <p className="mt-1 text-[1rem] text-[var(--ink)]">
+                  <p className="mt-2 text-sm text-neutral-700">
                     Colombo, Sri Lanka
                   </p>
                 </li>
               </ul>
 
-              {/* COO Quote */}
-              <blockquote className="mt-10 p-6 md:p-7 border border-[rgba(45,45,39,0.1)] bg-white rounded-[12px] font-[family-name:var(--head)] font-medium text-[1.2rem] leading-[1.45] text-[var(--teal)] max-w-[36rem]">
-                "Our operational framework is engineered for precision and predictability—ensuring seamless integration and rigorous delivery standards across every client workflow."
-              </blockquote>
-
               {/* Links */}
-              <div className="mt-10 flex gap-6 flex-wrap">
+              <div className="mt-6 flex gap-6 flex-wrap">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/kanishka-perera-04158611/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-[family-name:var(--head)] font-medium text-[var(--teal)] underline underline-offset-[6px] decoration-[1.5px] hover:decoration-[var(--teal-muted)] group"
                 >
                   LinkedIn

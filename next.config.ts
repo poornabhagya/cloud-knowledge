@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/cloud-knowledge",
+  basePath: process.env.GITHUB_ACTIONS ? "/cloud-knowledge" : undefined,
   images: {
     unoptimized: true,
   },
