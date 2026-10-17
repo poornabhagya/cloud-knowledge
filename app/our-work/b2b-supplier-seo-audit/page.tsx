@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { basePath } from "@/data/caseStudies";
 
 export const metadata: Metadata = {
   title:
@@ -74,7 +75,7 @@ export default function B2BSupplierCaseStudyPage() {
 
         {/* Hero Banner (1.png) */}
         <img
-          src="/images/case-studies/2/1.png"
+          src={`${basePath}/images/case-studies/2/1.png`}
           alt="179 problems affecting ranking ability of B2B supplier - SEO Audit"
           className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover my-6"
           loading="eager"
@@ -160,7 +161,7 @@ export default function B2BSupplierCaseStudyPage() {
               {/* Title Missing Proof Image (2.png) */}
               <figure className="my-6">
                 <img
-                  src="/images/case-studies/2/2.png"
+                  src={`${basePath}/images/case-studies/2/2.png`}
                   alt="Title is missing: 179 pages identified during technical SEO audit"
                   className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
                   loading="eager"
@@ -188,7 +189,7 @@ export default function B2BSupplierCaseStudyPage() {
               {/* Orphan URLs Proof Image (3.png) */}
               <figure className="my-6">
                 <img
-                  src="/images/case-studies/2/3.png"
+                  src={`${basePath}/images/case-studies/2/3.png`}
                   alt="Orphan URLs — only found via sitemap"
                   className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
                   loading="eager"

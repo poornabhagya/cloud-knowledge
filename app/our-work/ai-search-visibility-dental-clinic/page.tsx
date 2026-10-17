@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { basePath } from "@/data/caseStudies";
 
 export const metadata: Metadata = {
   title:
@@ -74,7 +75,7 @@ export default function DentalClinicCaseStudyPage() {
 
         {/* Hero Banner (1.png) */}
         <img
-          src="/images/case-studies/1/1.png"
+          src={`${basePath}/images/case-studies/1/1.png`}
           alt="Dental Clinic Case Study Hero"
           className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover my-6"
           loading="eager"
@@ -167,7 +168,7 @@ export default function DentalClinicCaseStudyPage() {
           {/* SERP Proof 1 (2.png) */}
           <figure className="my-6">
             <img
-              src="/images/case-studies/1/2.png"
+              src={`${basePath}/images/case-studies/1/2.png`}
               alt="An example of Aminya St Dental ranking for the keyword 'gum disease treatment Brisbane'"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
               loading="eager"
@@ -180,7 +181,7 @@ export default function DentalClinicCaseStudyPage() {
           {/* SERP Proof 2 (3.png) */}
           <figure className="my-6">
             <img
-              src="/images/case-studies/1/3.png"
+              src={`${basePath}/images/case-studies/1/3.png`}
               alt="An example of how Aminya St Dental is ranking for high intent keywords"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
               loading="eager"
@@ -210,7 +211,7 @@ export default function DentalClinicCaseStudyPage() {
           {/* Keyword Strategy & Trend Graph 1 (4.png) */}
           <div className="my-6 w-full">
             <img
-              src="/images/case-studies/1/4.png"
+              src={`${basePath}/images/case-studies/1/4.png`}
               alt="Search Trend & Keyword Opportunity Analysis"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
               loading="eager"
@@ -232,7 +233,7 @@ export default function DentalClinicCaseStudyPage() {
           {/* Keyword Engine & Mapping Graph 2 (5.png) */}
           <figure className="my-6">
             <img
-              src="/images/case-studies/1/5.png"
+              src={`${basePath}/images/case-studies/1/5.png`}
               alt="How we mapped high intent keywords, compared it with competitor sites and came up with the ideal content engine"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
               loading="eager"
@@ -262,7 +263,7 @@ export default function DentalClinicCaseStudyPage() {
           {/* AI Overview & ChatGPT Citations (6.png) */}
           <figure className="my-6">
             <img
-              src="/images/case-studies/1/6.png"
+              src={`${basePath}/images/case-studies/1/6.png`}
               alt="How ChatGPT & AI overviews rank Aminya St Dental after content changes + website optimization"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
               loading="eager"
@@ -319,7 +320,7 @@ export default function DentalClinicCaseStudyPage() {
           {/* Surge of Impressions & Traffic Chart (7.png) */}
           <figure className="my-6">
             <img
-              src="/images/case-studies/1/7.png"
+              src={`${basePath}/images/case-studies/1/7.png`}
               alt="Surge of impressions to the client's website (+193% impressions, +57% clicks)"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
               loading="eager"

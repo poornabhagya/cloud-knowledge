@@ -1,3 +1,5 @@
+export const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+
 export interface CaseStudy {
   slug: string;
   title: string;
@@ -30,7 +32,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "6 weeks",
     location: "New Zealand",
     standfirst: "How CKS built an investor ready five year financial model for a New Zealand underwear and activewear start-up with no in-house finance function. Covers sourcing and cost build-up, channel expansion sequencing, unit economics, cash flow, break-even analysis, and valuation.",
-    coverImage: "/images/case-studies/apparel/cover.jpg",
+    coverImage: `${basePath}/images/case-studies/apparel/cover.jpg`,
     results: [
       { val: "5 Years", lbl: "Modelled from pre-launch to scale" },
       { val: "Multi-Channel", lbl: "Sequenced & modelled independently" },
@@ -100,7 +102,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "8 weeks",
     location: "Australia",
     standfirst: "How CKS valued a family run painting and waterproofing business facing a post-pandemic construction slowdown and a failing external investor relationship, returning full ownership to the family at fair value.",
-    coverImage: "/images/case-studies/waterproofing/cover.jpg",
+    coverImage: `${basePath}/images/case-studies/waterproofing/cover.jpg`,
     results: [
       { val: "100%", lbl: "Ownership returned to family" },
       { val: "Fair Value", lbl: "Buy-out completed independently" },
@@ -166,7 +168,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "5 weeks",
     location: "Global / UK",
     standfirst: "How CKS built a total addressable market analysis for a leading higher education institution where published data was too coarse to size the opportunity, combining income distribution modelling with primary research.",
-    coverImage: "/images/case-studies/higher-ed-tam/cover.jpg",
+    coverImage: `${basePath}/images/case-studies/higher-ed-tam/cover.jpg`,
     results: [
       { val: "12 Markets", lbl: "Sized and prioritised" },
       { val: "Income-Lens", lbl: "Demand segmented by affordability" },
@@ -232,7 +234,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "1 month",
     location: "Brisbane, Australia",
     standfirst: "How CKS transformed organic and AI search visibility for a general and family dental clinic in Brisbane, securing Page 1 Google positions and ChatGPT citations within 1 month.",
-    coverImage: "/images/case-studies/1/1.png",
+    coverImage: `${basePath}/images/case-studies/1/1.png`,
     results: [
       { val: "+193%", lbl: "Impressions Surge" },
       { val: "+57%", lbl: "Organic Clicks Growth" },
@@ -298,7 +300,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "2 weeks (Starter product - SEO)",
     location: "Global",
     standfirst: "How a comprehensive SEO and technical audit for a B2B water treatment wholesale supplier uncovered 179 missing title tags, orphan URLs, and JavaScript rendering blockers.",
-    coverImage: "/images/case-studies/2/1.png",
+    coverImage: `${basePath}/images/case-studies/2/1.png`,
     tags: ["Manufacturing", "Technical SEO", "B2B"],
     results: [
       { val: "179+", lbl: "Title tag issues identified" },
@@ -361,7 +363,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "1 month",
     location: "Brisbane, Australia",
     standfirst: "Delivering a 400% increase in contact page conversions, +193% growth in impressions, and primary AI Overview citations for a local dental practice within 30 days.",
-    coverImage: "/images/case-studies/3/1.png",
+    coverImage: `${basePath}/images/case-studies/3/1.png`,
     tags: ["Healthcare", "SEO & AI Search", "Australia"],
     results: [
       { val: "+400%", lbl: "Contact Clicks" },
@@ -420,7 +422,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "1 Month",
     location: "Global",
     standfirst: "Rebuilding a global recruitment founder's LinkedIn presence from the ground up, coupled with a 6-month bespoke thought leadership and content calendar.",
-    coverImage: "/images/case-studies/4/1.png",
+    coverImage: `${basePath}/images/case-studies/4/1.png`,
     tags: ["Personal Branding", "Executive Search", "LinkedIn"],
     results: [
       { val: "Complete", lbl: "Profile Rebuild" },
@@ -475,7 +477,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "1 Month",
     location: "UK",
     standfirst: "Delivering an indicative pre-IPO company valuation, dual peer-group multiple segmentation, and multi-scenario early investor return models.",
-    coverImage: "/images/case-studies/5/1.png",
+    coverImage: `${basePath}/images/case-studies/5/1.png`,
     tags: ["Corporate Finance", "Valuation", "Pre-IPO"],
     results: [
       { val: "Delivered", lbl: "Company Valuation" },
@@ -538,7 +540,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "3 weeks",
     location: "Global",
     standfirst: "Delivering an independent penetration test, identifying critical risk vectors, and establishing a prioritized vulnerability remediation roadmap to secure sensitive portal data.",
-    coverImage: "/images/case-studies/6/1.png",
+    coverImage: `${basePath}/images/case-studies/6/1.png`,
     tags: ["Cybersecurity", "Penetration Testing", "Intelligence Platforms"],
     results: [
       { val: "1 Issue", lbl: "Critical Averted" },
@@ -601,7 +603,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "8 weeks",
     location: "Africa",
     standfirst: "Developing a cohort-level bottom-up financial model, 3-stage DCF valuation with exit IRR scenarios, and an executive C-level rollup dashboard for an African educational buyout.",
-    coverImage: "/images/case-studies/7/1.png",
+    coverImage: `${basePath}/images/case-studies/7/1.png`,
     tags: ["Private Equity", "Financial Modelling", "Education"],
     results: [
       { val: "3-Stage", lbl: "DCF Model" },
@@ -664,7 +666,7 @@ export const caseStudiesData: Record<string, CaseStudy> = {
     duration: "18 Months",
     location: "Global",
     standfirst: "Driving a 50x LinkedIn follower growth, 3.2x organic traffic surge, and industry-leading newsletter engagement via multi-subsidiary content marketing.",
-    coverImage: "/images/case-studies/8/1.png",
+    coverImage: `${basePath}/images/case-studies/8/1.png`,
     tags: ["Technology", "B2B Marketing", "Content Strategy"],
     results: [
       { val: "50x", lbl: "LinkedIn Scale" },

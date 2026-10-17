@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { basePath } from "@/data/caseStudies";
 
 export const metadata: Metadata = {
   title:
@@ -74,7 +75,7 @@ export default function ScalingB2BTechBrandCaseStudyPage() {
 
         {/* Hero Banner Graphic */}
         <img
-          src="/images/case-studies/8/1.png"
+          src={`${basePath}/images/case-studies/8/1.png`}
           alt="Scaling a B2B Tech Brand Through Content"
           className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover my-8"
           loading="eager"

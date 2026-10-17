@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { basePath } from "@/data/caseStudies";
 
 export const metadata: Metadata = {
   title:
@@ -74,7 +75,7 @@ export default function DentalClinicGrowthCaseStudyPage() {
 
         {/* Hero Banner Image */}
         <img
-          src="/images/case-studies/3/1.png"
+          src={`${basePath}/images/case-studies/3/1.png`}
           alt="Dental Clinic 30-Day Visibility Growth"
           className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover my-8"
           loading="eager"
@@ -181,7 +182,7 @@ export default function DentalClinicGrowthCaseStudyPage() {
           {/* Screenshot 2 */}
           <figure className="my-6">
             <img
-              src="/images/case-studies/3/2.png"
+              src={`${basePath}/images/case-studies/3/2.png`}
               alt="Contact us page CTR analytics"
               className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm"
               loading="eager"
@@ -298,7 +299,7 @@ export default function DentalClinicGrowthCaseStudyPage() {
             </h3>
             <figure className="my-6">
               <img
-                src="/images/case-studies/3/3.png"
+                src={`${basePath}/images/case-studies/3/3.png`}
                 alt="Organic Search Impressions Comparison"
                 className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
                 loading="eager"
@@ -316,7 +317,7 @@ export default function DentalClinicGrowthCaseStudyPage() {
             </h3>
             <figure className="my-6">
               <img
-                src="/images/case-studies/3/4.png"
+                src={`${basePath}/images/case-studies/3/4.png`}
                 alt="Growth in impressions"
                 className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
                 loading="eager"
@@ -334,7 +335,7 @@ export default function DentalClinicGrowthCaseStudyPage() {
             </h3>
             <figure className="my-6">
               <img
-                src="/images/case-studies/3/5.png"
+                src={`${basePath}/images/case-studies/3/5.png`}
                 alt="AI Overview Citation"
                 className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
                 loading="eager"
@@ -346,7 +347,7 @@ export default function DentalClinicGrowthCaseStudyPage() {
 
             <figure className="my-6">
               <img
-                src="/images/case-studies/3/6.png"
+                src={`${basePath}/images/case-studies/3/6.png`}
                 alt="Competitive ranking keywords"
                 className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover"
                 loading="eager"

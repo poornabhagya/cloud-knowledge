@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { basePath } from "@/data/caseStudies";
 
 export const metadata: Metadata = {
   title:
@@ -77,7 +78,7 @@ export default function PEFinancialModellingCaseStudyPage() {
 
         {/* Hero Banner Graphic */}
         <img
-          src="/images/case-studies/7/1.png"
+          src={`${basePath}/images/case-studies/7/1.png`}
           alt="Financial Modelling for a Private Equity Education Rollup Across Africa"
           className="w-full h-auto rounded-xl border border-neutral-200/80 shadow-sm object-cover my-8"
           loading="eager"
