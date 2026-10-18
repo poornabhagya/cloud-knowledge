@@ -19,7 +19,7 @@ export default function Footer() {
           </Link>
           <br/>
           <p className="mt-8 text-[rgba(243,239,234,0.6)] max-w-[20rem] text-[0.95rem] leading-[1.7]">
-            Tagline placeholder. One line, around 12 words.
+            The Work Behind the Build
           </p>
           
           <address className="not-italic mt-7 leading-[1.8] text-[rgba(243,239,234,0.78)]">
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-3.5 mt-8">
             <a
-              href="https://www.linkedin.com/company/ceylon-knowledge-services"
+              href="https://www.linkedin.com/company/ceylon-knowledge-services/home/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -44,7 +44,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/ceylonknowledge/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

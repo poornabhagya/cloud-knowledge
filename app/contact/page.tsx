@@ -107,6 +107,10 @@ export default function ContactPage() {
               <input type="text" id="full-name" name="fullName" required placeholder=" " />
               <label htmlFor="full-name">Full Name <span className="req" aria-hidden="true">*</span></label>
             </div>
+            <div className="field sm:col-span-2">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label htmlFor="email">Work Email <span className="req" aria-hidden="true">*</span></label>
+            </div>
             <div className="field">
               <input type="text" id="organisation" name="organisation" placeholder=" " />
               <label htmlFor="organisation">Organisation</label>
