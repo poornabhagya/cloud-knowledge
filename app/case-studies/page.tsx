@@ -51,16 +51,18 @@ export default function CaseStudiesPage() {
         </div>
       </nav>
 
-      {/* Hero */}
-      <section className="py-16 md:py-20">
-        <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-end">
-          <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] text-[var(--teal)] max-w-[16ch] leading-[1.2]">
-            Case studies
-          </h1>
-          <p className="text-[1.2rem] leading-[1.65] max-w-[32rem] text-[var(--ink)]">
-            A selection of recent specialist engagements. Client identities are
-            withheld where requested under binding confidentiality.
-          </p>
+      {/* Page Hero */}
+      <section className="pt-16 md:pt-20">
+        <div className="wrap">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start mb-16 md:mb-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0B3B36]">
+              Case studies
+            </h1>
+            <p className="text-base md:text-lg text-neutral-700 leading-relaxed">
+              A selection of recent specialist engagements. Client identities are
+              withheld where requested under binding confidentiality.
+            </p>
+          </div>
         </div>
       </section>
 

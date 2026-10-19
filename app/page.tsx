@@ -15,6 +15,72 @@ import {
 } from "lucide-react";
 import { testimonialsList } from "@/data/testimonials";
 
+const capabilities = [
+  {
+    title: "Leadership",
+    icon: Users,
+    href: null,
+    hasArrow: false,
+    isCore: true,
+  },
+  {
+    title: "Strategy",
+    icon: Target,
+    href: "/solutions/strategy-research",
+    hasArrow: true,
+    isCore: false,
+  },
+  {
+    title: "Sales",
+    icon: TrendingUp,
+    href: null,
+    hasArrow: false,
+    isCore: true,
+  },
+  {
+    title: "Finance",
+    icon: PieChart,
+    href: "/solutions/financial-modelling-planning",
+    hasArrow: true,
+    isCore: false,
+  },
+  {
+    title: "Product",
+    icon: Layers,
+    href: null,
+    hasArrow: false,
+    isCore: true,
+  },
+  {
+    title: "Data",
+    icon: Database,
+    href: "/solutions/data-driven-insights",
+    hasArrow: true,
+    isCore: false,
+  },
+  {
+    title: "Marketing",
+    icon: Megaphone,
+    href: "/solutions/marketing",
+    hasArrow: true,
+    isCore: false,
+  },
+  {
+    title: "Operations",
+    icon: Settings,
+    href: "/solutions/retail-operations",
+    hasArrow: true,
+    isCore: false,
+  },
+  {
+    title: "Cybersecurity",
+    icon: ShieldCheck,
+    href: "/solutions/cybersecurity",
+    hasArrow: true,
+    isCore: false,
+  },
+];
+
 export default function Home() {
   const trackRef = useRef<HTMLUListElement>(null);
   const [canPrev, setCanPrev] = useState(false);
@@ -97,126 +163,53 @@ export default function Home() {
           </div>
 
           {/* 3x3 Grid of Tiles */}
-          <div className="grid w-full max-w-full grid-cols-3 gap-[10px] overflow-hidden">
-            {/* 1. Leadership */}
-            <div className="relative aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)] overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Users className="w-8 h-8 sm:w-9 sm:h-9 text-[#0B3B36]" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 w-full text-left">Leadership</span>
-            </div>
+          <div className="grid w-full max-w-full grid-cols-3 gap-2.5 sm:gap-3.5">
+            {capabilities.map((item) => {
+              const Icon = item.icon;
+              const cardContent = (
+                <>
+                  <div className="w-full flex justify-start mb-6">
+                    <Icon
+                      className={`w-6 h-6 sm:w-7 sm:h-7 max-w-[28px] max-h-[28px] ${
+                        item.isCore ? "text-[#0B3B36]" : "text-white/95"
+                      }`}
+                      strokeWidth={1.75}
+                    />
+                  </div>
+                  <div className="w-full flex items-center justify-between mt-auto">
+                    <span className="font-poppins font-[family-name:var(--head)] font-medium text-[14px] sm:text-[16px] leading-tight break-words">
+                      {item.title}
+                    </span>
+                    {item.hasArrow && (
+                      <span className="text-xs opacity-75 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ml-1 shrink-0">
+                        ↗
+                      </span>
+                    )}
+                  </div>
+                </>
+              );
 
-            {/* 2. Strategy */}
-            <Link
-              href="/solutions/strategy-research"
-              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Target className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
-                <span>Strategy</span>
-                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </span>
-            </Link>
+              if (item.href) {
+                return (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className="relative flex flex-col justify-between items-start text-left p-4 sm:p-6 rounded-[16px] bg-[var(--teal)] text-[var(--cream)] hover:bg-[#022B2A] transition-colors no-underline group min-h-[130px] sm:min-h-[150px] aspect-[1.15/1] overflow-hidden"
+                  >
+                    {cardContent}
+                  </Link>
+                );
+              }
 
-            {/* 3. Sales */}
-            <div className="relative aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)] overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <TrendingUp className="w-8 h-8 sm:w-9 sm:h-9 text-[#0B3B36]" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 w-full text-left">Sales</span>
-            </div>
-
-            {/* 4. Finance */}
-            <Link
-              href="/solutions/financial-modelling-planning"
-              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <PieChart className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
-                <span>Finance</span>
-                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* 5. Product */}
-            <div className="relative aspect-[1.25/1] rounded-[3px] border-[1.5px] border-[#8B8B83] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 text-[var(--grey-text)] overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Layers className="w-8 h-8 sm:w-9 sm:h-9 text-[#0B3B36]" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 w-full text-left">Product</span>
-            </div>
-
-            {/* 6. Data */}
-            <Link
-              href="/solutions/data-driven-insights"
-              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Database className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
-                <span>Data</span>
-                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* 7. Marketing */}
-            <Link
-              href="/solutions/marketing"
-              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Megaphone className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
-                <span>Marketing</span>
-                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* 8. Operations */}
-            <Link
-              href="/solutions/retail-operations"
-              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Settings className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
-                <span>Operations</span>
-                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* 9. Cybersecurity */}
-            <Link
-              href="/solutions/cybersecurity"
-              className="relative aspect-[1.25/1] rounded-[3px] bg-[var(--teal)] text-[var(--cream)] p-2.5 sm:p-4 flex flex-col justify-end font-[family-name:var(--head)] font-medium text-[0.82rem] sm:text-[1rem] leading-[1.15] break-words hyphens-auto min-w-0 hover:bg-[#022B2A] transition-colors no-underline group overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <ShieldCheck className="w-8 h-8 sm:w-9 sm:h-9 text-white/95" strokeWidth={1.75} />
-              </div>
-              <span className="relative z-10 flex min-w-0 items-end justify-between w-full gap-1.5 break-words">
-                <span>Cybersecurity</span>
-                <svg className="w-3.5 h-3.5 mb-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 12 12 4M6 4h6v6" />
-                </svg>
-              </span>
-            </Link>
+              return (
+                <div
+                  key={item.title}
+                  className="relative flex flex-col justify-between items-start text-left p-4 sm:p-6 rounded-[16px] border-[1.5px] border-[#8B8B83] text-[var(--grey-text)] min-h-[130px] sm:min-h-[150px] aspect-[1.15/1] overflow-hidden"
+                >
+                  {cardContent}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

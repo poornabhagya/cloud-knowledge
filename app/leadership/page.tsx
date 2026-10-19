@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+
 export const metadata: Metadata = {
   title: "Leadership | Ceylon Knowledge Services",
   description:
@@ -60,13 +62,13 @@ export default function LeadershipPage() {
           {/* Founder & Chief Executive */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
             {/* Sticky Photo Container (4:5 Aspect Ratio) */}
-            <div
-              className="aspect-[4/5] rounded-[16px] bg-[#E4E0D8] grid place-items-center text-[var(--grey-text)] text-[0.9rem] text-center p-4 lg:sticky lg:top-8 max-w-[22rem] w-full"
-              aria-label="Krishanth Jayarajah photograph placeholder"
-            >
-              Krishanth Jayarajah photograph
-              <br />
-              Portrait, 4:5, minimum 1200px wide
+            <div className="relative w-full aspect-[4/5] rounded-[16px] overflow-hidden bg-neutral-100 shadow-sm lg:sticky lg:top-8 max-w-[22rem]">
+              <img
+                src={`${basePath}/images/Krishanth.jpg`}
+                alt="Krishanth Jayarajah"
+                className="w-full h-full object-cover object-top"
+                loading="eager"
+              />
             </div>
 
             {/* Bio & Details */}
