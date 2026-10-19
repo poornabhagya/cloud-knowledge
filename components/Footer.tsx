@@ -1,21 +1,29 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // Hide global footer on standalone campaign pages
+  if (pathname?.startsWith("/dfs")) {
+    return null;
+  }
   return (
     <footer className="bg-[var(--ink)] text-[rgba(243,239,234,0.78)] pt-20 pb-12 text-[0.95rem]">
       <div className="wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-12 gap-y-12">
         
         {/* Brand & Address Column */}
         <div className="flex flex-col">
-          <Link href="/" className="inline-flex items-center gap-3 no-underline">
-            <b className="font-[family-name:var(--head)] font-semibold text-2xl text-[var(--cream)] tracking-[0.02em]">
-              CKS
-            </b>
-            <span className="border-l border-[rgba(243,239,234,0.25)] pl-3 text-[rgba(243,239,234,0.6)] text-[0.9rem] leading-[1.3]">
-              Ceylon Knowledge
-              <br />
-              Services
-            </span>
+          <Link className="inline-block" href="/">
+            <img
+              src={`${basePath}/images/logos/cks-logo.png`}
+              alt="Ceylon Knowledge Services"
+              className="h-9 w-auto object-contain brightness-0 invert"
+            />
           </Link>
           <br/>
           <p className="mt-8 text-[rgba(243,239,234,0.6)] max-w-[20rem] text-[0.95rem] leading-[1.7]">

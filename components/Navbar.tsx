@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
@@ -14,6 +16,11 @@ export default function Navbar() {
     setIsOpen(false);
     setOpenSubMenu(null);
   }, [pathname]);
+
+  // Hide global navbar on standalone campaign pages
+  if (pathname?.startsWith("/dfs")) {
+    return null;
+  }
 
   const toggleSubMenu = (menuName: string) => {
     setOpenSubMenu((prev) => (prev === menuName ? null : menuName));
@@ -40,14 +47,13 @@ export default function Navbar() {
   return (
     <header className="bg-[var(--teal)] text-[var(--cream)] sticky top-0 z-50 w-full shadow-sm border-b border-[#043D3B]/20">
       <div className="wrap flex items-center justify-between h-[76px] gap-4">
-        {/* Wordmark */}
-        <Link href="/" onClick={closeAll} className="flex items-center gap-3 no-underline">
-          <b className="font-[family-name:var(--head)] font-semibold text-2xl tracking-[0.02em] text-[var(--cream)]">
-            CKS
-          </b>
-          <span className="hidden sm:inline-block border-l border-[var(--teal-muted)] pl-3 text-[var(--teal-quiet)] text-[0.9rem] leading-[1.2]">
-            Ceylon Knowledge<br />Services
-          </span>
+        {/* Brand Logo */}
+        <Link className="flex items-center" href="/" onClick={closeAll}>
+          <img
+            src={`${basePath}/images/logos/cks-logo.png`}
+            alt="Ceylon Knowledge Services"
+            className="h-9 w-auto object-contain brightness-0 invert"
+          />
         </Link>
 
         {/* Mobile Toggle */}
