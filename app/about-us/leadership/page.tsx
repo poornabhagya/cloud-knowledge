@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function LeadershipPage() {
-  const basePath =
-    process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+  const basePath = "";
 
   return (
     <main>

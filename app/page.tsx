@@ -14,6 +14,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { testimonialsList } from "@/data/testimonials";
+import ContactForm from "../components/ContactForm";
 
 const capabilities = [
   {
@@ -162,26 +163,26 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3x3 Grid of Tiles */}
-          <div className="grid w-full max-w-full grid-cols-3 gap-2.5 sm:gap-3.5">
+          {/* Responsive Grid of Tiles */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-full">
             {capabilities.map((item) => {
               const Icon = item.icon;
               const cardContent = (
                 <>
-                  <div className="w-full flex justify-start mb-6">
+                  <div className="w-full flex items-center justify-start mb-4 sm:mb-6">
                     <Icon
-                      className={`w-6 h-6 sm:w-7 sm:h-7 max-w-[28px] max-h-[28px] ${
+                      className={`w-6 h-6 sm:w-7 sm:h-7 shrink-0 ${
                         item.isCore ? "text-[#0B3B36]" : "text-white/95"
                       }`}
                       strokeWidth={1.75}
                     />
                   </div>
-                  <div className="w-full flex items-center justify-between mt-auto">
-                    <span className="font-poppins font-[family-name:var(--head)] font-medium text-[14px] sm:text-[16px] leading-tight break-words">
+                  <div className="w-full flex items-center justify-between gap-2 mt-auto">
+                    <span className="font-poppins font-[family-name:var(--head)] font-medium text-[15px] sm:text-[16px] leading-tight break-words">
                       {item.title}
                     </span>
                     {item.hasArrow && (
-                      <span className="text-xs opacity-75 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ml-1 shrink-0">
+                      <span className="text-xs opacity-75 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0">
                         ↗
                       </span>
                     )}
@@ -194,7 +195,7 @@ export default function Home() {
                   <Link
                     key={item.title}
                     href={item.href}
-                    className="relative flex flex-col justify-between items-start text-left p-4 sm:p-6 rounded-[16px] bg-[var(--teal)] text-[var(--cream)] hover:bg-[#022B2A] transition-colors no-underline group min-h-[130px] sm:min-h-[150px] aspect-[1.15/1] overflow-hidden"
+                    className="flex flex-col justify-between items-start text-left p-4 sm:p-6 rounded-[16px] bg-[var(--teal)] text-[var(--cream)] hover:bg-[#022B2A] transition-colors no-underline group w-full min-h-[110px] sm:min-h-[140px] sm:aspect-[1.15/1] overflow-hidden"
                   >
                     {cardContent}
                   </Link>
@@ -204,7 +205,7 @@ export default function Home() {
               return (
                 <div
                   key={item.title}
-                  className="relative flex flex-col justify-between items-start text-left p-4 sm:p-6 rounded-[16px] border-[1.5px] border-[#8B8B83] text-[var(--grey-text)] min-h-[130px] sm:min-h-[150px] aspect-[1.15/1] overflow-hidden"
+                  className="flex flex-col justify-between items-start text-left p-4 sm:p-6 rounded-[16px] border-[1.5px] border-[#8B8B83] text-[var(--grey-text)] bg-transparent w-full min-h-[110px] sm:min-h-[140px] sm:aspect-[1.15/1] overflow-hidden"
                 >
                   {cardContent}
                 </div>
@@ -428,48 +429,10 @@ export default function Home() {
           </div>
 
           {/* Form */}
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12" action="#" method="post" noValidate>
-            <div className="field sm:col-span-2">
-              <input type="text" id="full-name" name="fullName" required placeholder=" " />
-              <label htmlFor="full-name">Full Name <span className="req" aria-hidden="true">*</span></label>
-            </div>
-            <div className="field sm:col-span-2">
-              <input type="email" id="email" name="email" required placeholder=" " />
-              <label htmlFor="email">Work Email <span className="req" aria-hidden="true">*</span></label>
-            </div>
-            <div className="field">
-              <input type="text" id="organisation" name="organisation" placeholder=" " />
-              <label htmlFor="organisation">Organisation</label>
-            </div>
-            <div className="field">
-              <input type="text" id="job-title" name="job-title" placeholder=" " />
-              <label htmlFor="job-title">Job Title</label>
-            </div>
-            <div className="field">
-              <input type="text" id="country" name="country" placeholder=" " />
-              <label htmlFor="country">Country / Region</label>
-            </div>
-            <div className="field">
-              <input type="text" id="business-type" name="business-type" placeholder=" " />
-              <label htmlFor="business-type">Business Type</label>
-            </div>
-            <div className="field sm:col-span-2">
-              <textarea placeholder=" " id="message" name="message"></textarea>
-              <label htmlFor="message">Message</label>
-            </div>
-            <div className="sm:col-span-2 flex items-center justify-between gap-5 flex-wrap mt-3">
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2.5 bg-[var(--teal)] text-[var(--cream)] px-7 py-4 text-[1rem] rounded-full hover:bg-[#022B2A] transition-colors cursor-pointer border-none font-[family-name:var(--head)] font-medium group"
-              >
-                Let's Talk
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-              <span className="text-[0.85rem] text-[var(--grey-text)]">Required fields marked *</span>
-            </div>
-          </form>
+          <ContactForm
+            formSubject="New Inquiry - CKS Homepage"
+            source="Home Page"
+          />
         </div>
       </section>
     </main>

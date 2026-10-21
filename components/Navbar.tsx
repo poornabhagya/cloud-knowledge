@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+const basePath = "";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

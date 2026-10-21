@@ -3,21 +3,62 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+const basePath = "";
 
 export default function DfsLandingPage() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) return;
-    setFormSubmitted(true);
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    const accessKey =
+      process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "9f1efe04-8883-42c6-9198-421c83444200";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: "New Inquiry - CKS Dubai FinTech Summit",
+          from_name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          source: "Dubai FinTech Summit Landing Page",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+        setErrorMessage(
+          result.message || "Failed to submit your message. Please try again."
+        );
+      }
+    } catch {
+      setStatus("error");
+      setErrorMessage(
+        "Network error. Please try again or reach out directly via WhatsApp."
+      );
+    }
   };
 
   return (
@@ -425,7 +466,7 @@ export default function DfsLandingPage() {
             {/* Right Side (Form Card) */}
             <div className="lg:col-span-7">
               <div className="bg-white rounded-[16px] p-8 sm:p-9 shadow-sm border border-neutral-200/80">
-                {formSubmitted ? (
+                {status === "success" ? (
                   <div className="py-8 text-center">
                     <div className="w-12 h-12 bg-[#489D96]/20 text-[#043D3B] rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -436,15 +477,15 @@ export default function DfsLandingPage() {
                       Note received.
                     </h3>
                     <p className="text-sm text-[#2D2D27]/80 max-w-sm mx-auto mb-6">
-                      Thank you, {formData.name}. Krishanth will review your note and get back to you within one working day.
+                      Thank you. We have received your message and will reply within one working day.
                     </p>
                     <button
                       type="button"
                       onClick={() => {
-                        setFormSubmitted(false);
+                        setStatus("idle");
                         setFormData({ name: "", company: "", email: "", message: "" });
                       }}
-                      className="text-xs font-semibold text-[#043D3B] underline underline-offset-4 hover:text-[#489D96]"
+                      className="text-xs font-semibold text-[#043D3B] underline underline-offset-4 hover:text-[#489D96] cursor-pointer"
                     >
                       Send another note
                     </button>
@@ -454,7 +495,7 @@ export default function DfsLandingPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="dfs-name" className="block text-[15px] font-semibold text-[#1D4E4A] mb-1.5">
-                          Name
+                          Name <span className="text-[#489D96]">*</span>
                         </label>
                         <input
                           id="dfs-name"
@@ -462,7 +503,8 @@ export default function DfsLandingPage() {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E]"
+                          disabled={status === "submitting"}
+                          className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E] disabled:opacity-60"
                         />
                       </div>
 
@@ -475,14 +517,15 @@ export default function DfsLandingPage() {
                           type="text"
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                          className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E]"
+                          disabled={status === "submitting"}
+                          className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E] disabled:opacity-60"
                         />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="dfs-email" className="block text-[15px] font-semibold text-[#1D4E4A] mb-1.5">
-                        Work email
+                        Work email <span className="text-[#489D96]">*</span>
                       </label>
                       <input
                         id="dfs-email"
@@ -490,7 +533,8 @@ export default function DfsLandingPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E]"
+                        disabled={status === "submitting"}
+                        className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E] disabled:opacity-60"
                       />
                     </div>
 
@@ -503,15 +547,57 @@ export default function DfsLandingPage() {
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E] resize-y"
+                        disabled={status === "submitting"}
+                        className="w-full border border-neutral-400 bg-transparent px-4 py-2.5 rounded-[4px] focus:outline-none focus:border-[#1D4E4A] text-[#15201E] resize-y disabled:opacity-60"
                       />
                     </div>
 
+                    {status === "error" && (
+                      <div
+                        className="p-3.5 rounded-[4px] bg-[#FDEDED] border border-[#F5C2C7] text-[#842029] text-sm"
+                        role="alert"
+                      >
+                        {errorMessage ||
+                          "Failed to send your message. Please check the fields and try again."}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="bg-[#1D4E4A] hover:opacity-90 text-[#F4F1E8] font-semibold py-3.5 rounded-[4px] w-full text-center transition-all cursor-pointer shadow-sm"
+                      disabled={status === "submitting"}
+                      className={`bg-[#1D4E4A] text-[#F4F1E8] font-semibold py-3.5 rounded-[4px] w-full text-center transition-all shadow-sm ${
+                        status === "submitting"
+                          ? "opacity-70 cursor-not-allowed"
+                          : "hover:opacity-90 cursor-pointer"
+                      }`}
                     >
-                      Send
+                      {status === "submitting" ? (
+                        <span className="inline-flex items-center justify-center gap-2">
+                          <svg
+                            className="animate-spin h-4 w-4 text-[#F4F1E8]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                            ></path>
+                          </svg>
+                          Sending...
+                        </span>
+                      ) : (
+                        "Send"
+                      )}
                     </button>
                   </form>
                 )}

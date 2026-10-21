@@ -1,4 +1,4 @@
-export const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+export const basePath = "";
 
 export interface CaseStudy {
   slug: string;

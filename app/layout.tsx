@@ -21,6 +21,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ceylon Knowledge Services | Strategic Knowledge Solutions",
   description: "Specialist execution partner for growth organisations.",
+  icons: {
+    icon: [
+      { url: "/images/logos/cks-logo-raw.png" },
+      { url: "/icon.png" },
+    ],
+    apple: "/images/logos/cks-logo-raw.png",
+  },
 };
 
 export default function RootLayout({
@@ -29,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
-      <body className="antialiased" suppressHydrationWarning>
+    <html lang="en-GB" className={`${poppins.variable} ${inter.variable} overflow-x-hidden max-w-[100vw]`} suppressHydrationWarning>
+      <body className="antialiased overflow-x-hidden max-w-[100vw]" suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />

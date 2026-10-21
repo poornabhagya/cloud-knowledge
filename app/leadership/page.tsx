@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+const basePath = "";
 
 export const metadata: Metadata = {
   title: "Leadership | Ceylon Knowledge Services",

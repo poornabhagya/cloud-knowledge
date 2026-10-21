@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import ContactForm from "../../components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Partner with Us | Ceylon Knowledge Services",
@@ -102,59 +103,10 @@ export default function ContactPage() {
           </div>
 
           {/* Fọ́ọ̀mù */}
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-11" action="#" method="post" noValidate>
-            <div className="field sm:col-span-2">
-              <input type="text" id="full-name" name="fullName" required placeholder=" " />
-              <label htmlFor="full-name">Full Name <span className="req" aria-hidden="true">*</span></label>
-            </div>
-            <div className="field sm:col-span-2">
-              <input type="email" id="email" name="email" required placeholder=" " />
-              <label htmlFor="email">Work Email <span className="req" aria-hidden="true">*</span></label>
-            </div>
-            <div className="field">
-              <input type="text" id="organisation" name="organisation" placeholder=" " />
-              <label htmlFor="organisation">Organisation</label>
-            </div>
-            <div className="field">
-              <input type="text" id="job-title" name="job-title" placeholder=" " />
-              <label htmlFor="job-title">Job Title</label>
-            </div>
-            <div className="field">
-              <input type="text" id="country" name="country" placeholder=" " />
-              <label htmlFor="country">Country / Region</label>
-            </div>
-            <div className="field">
-              <input type="text" id="business-type" name="business-type" placeholder=" " />
-              <label htmlFor="business-type">Business Type</label>
-            </div>
-            <div className="field sm:col-span-2">
-              <textarea placeholder=" " id="message" name="message"></textarea>
-              <label htmlFor="message">Message</label>
-            </div>
-            <div className="sm:col-span-2 flex items-center justify-between gap-5 flex-wrap mt-2">
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2.5 bg-[var(--teal)] text-[var(--cream)] px-7 py-4 text-[1rem] rounded-full hover:bg-[#022B2A] transition-colors cursor-pointer border-none font-[family-name:var(--head)] font-medium group"
-              >
-                Let's Talk
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-              <span className="text-[0.85rem] text-[var(--grey-text)]">
-                Required fields marked *
-              </span>
-            </div>
-          </form>
+          <ContactForm
+            formSubject="New Inquiry - CKS Partner with Us"
+            source="Partner with Us Page"
+          />
         </div>
       </section>
 

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const basePath = process.env.NODE_ENV === "production" ? "/cloud-knowledge" : "";
+const basePath = "";
 
 export default function Footer() {
   const pathname = usePathname();
